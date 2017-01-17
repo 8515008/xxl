@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include "cocos2d.h"
+#include "common.h"
 
 #endif /* GameBoardLayer_hpp */
 
@@ -24,4 +25,10 @@ public:
     
     virtual bool init();
     CREATE_FUNC(GameBoardLayer);
+    
+    static GameBoardLayer* createGameBoardLayer(GameBoardToSceneDelegate* delegate);
+
+private:
+    GameBoardToSceneDelegate* viewDelegate;
+    
 };

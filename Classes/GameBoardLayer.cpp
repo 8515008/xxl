@@ -25,3 +25,11 @@ bool GameBoardLayer::init()
 {
     return false;
 }
+
+GameBoardLayer* GameBoardLayer::createGameBoardLayer(GameBoardToSceneDelegate* delegate)
+{
+    auto layer = new GameBoardLayer();
+    layer->viewDelegate = delegate;
+    
+    return layer;
+}
