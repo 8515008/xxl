@@ -10,8 +10,9 @@
 #define Common_h
 
 #include "cocos2d.h"
+#include "Block.hpp"
 
-using namespace cocos2d;
+USING_NS_CC;
 
 class GameBoardToSceneDelegate
 {

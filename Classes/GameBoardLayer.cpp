@@ -9,8 +9,6 @@
 #include "cocos2d.h"
 #include "GameBoardLayer.hpp"
 
-using namespace cocos2d;
-
 GameBoardLayer::GameBoardLayer()
 {
     
@@ -25,6 +23,18 @@ bool GameBoardLayer::init()
 {
     return false;
 }
+
+bool GameBoardLayer::initWithBlockModels(Vector<Vector<Block*>>)
+{
+    //TODO: draw the matrixs according to the model data
+}
+
+
+void GameBoardLayer::update(float dt)
+{
+    //TODO: add your code here to update the whole view
+}
+
 
 GameBoardLayer* GameBoardLayer::createGameBoardLayer(GameBoardToSceneDelegate* delegate)
 {

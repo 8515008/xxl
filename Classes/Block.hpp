@@ -10,18 +10,19 @@
 #define Block_hpp
 
 #include <stdio.h>
+#include "Common.h"
 
-#endif /* Block_hpp */
-#include "cocos2d.h"
-
-using namespace cocos2d;
-
-class Block : CCSprite
+class Block //TODO: public
 {
-    int x;
-    int y;
-    int color;
 public:
+    static Block* create();
+    
     Block() {};
     ~Block() {};
+private:
+    CC_SYNTHESIZE(int, m_row, Row);
+    CC_SYNTHESIZE(int, m_col, Col);
+    CC_SYNTHESIZE(int, m_imgIndex, ImgIndex);
 };
+
+#endif /* Block_hpp */

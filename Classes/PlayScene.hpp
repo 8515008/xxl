@@ -11,15 +11,13 @@
 
 #include <stdio.h>
 
-#endif /* PlayScene_hpp */
-#include "cocos2d.h"
 #include "GameBoardLayer.hpp"
+#include "GameBoardModel.hpp"
 #include "common.h"
 
-using namespace cocos2d;
-
-class PlayScene : public CCLayer, public GameBoardToSceneDelegate
+class PlayScene : public Layer, public GameBoardToSceneDelegate
 {
+public:
     static cocos2d::Scene* createScene();
     
     virtual bool init();
@@ -30,5 +28,8 @@ class PlayScene : public CCLayer, public GameBoardToSceneDelegate
     CREATE_FUNC(PlayScene);
     
 private:
-    //GameBoardLayer* gameboardLayer;
+    CC_SYNTHESIZE(GameBoardLayer*, m_gameboardLayer, GameBoardLayer);
+    CC_SYNTHESIZE(GameBoardModel*, m_gameboardModel, GameBoardModel);
 };
+
+#endif /* PlayScene_hpp */
