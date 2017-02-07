@@ -20,7 +20,7 @@ bool GameBoardModel::init(int row, int col)
     return true;
 }
 
-Vector<Vector<Block*>> GameBoardModel::getBlocks()
+std::vector<std::vector<Block*>> GameBoardModel::getBlocks()
 {
     return m_vtblockMaps;
 }

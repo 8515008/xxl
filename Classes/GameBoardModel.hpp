@@ -20,10 +20,10 @@ public:
     ~GameBoardModel();
     
     bool init(int row, int col);
-    Vector<Vector<Block*>> getBlocks();
+    std::vector<std::vector<Block*>> getBlocks();
     
 private:
-    Vector<Vector<Block*>> m_vtblockMaps;
+    std::vector<std::vector<Block*>> m_vtblockMaps;
     
 };
 

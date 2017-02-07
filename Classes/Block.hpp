@@ -12,7 +12,7 @@
 #include <stdio.h>
 #include "Common.h"
 
-class Block //TODO: public
+class Block : public cocos2d::Ref
 {
 public:
     static Block* create();

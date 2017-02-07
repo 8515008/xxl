@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 #include "common.h"
 #include "Block.hpp"
+#include "BlockView.hpp"
 
 USING_NS_CC;
 
@@ -23,7 +24,7 @@ public:
     virtual ~GameBoardLayer();
     
     virtual bool init();
-    bool initWithBlockModels(Vector<Vector<Block*>>);
+    bool initWithBlockModels(std::vector<std::vector<Block*>>);
     CREATE_FUNC(GameBoardLayer);
     
 protected:
@@ -34,6 +35,7 @@ public:
 
 private:
     GameBoardToSceneDelegate* viewDelegate;
+    std::vector<BlockView*> bViews;
     
 };
 

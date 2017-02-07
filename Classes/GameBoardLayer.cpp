@@ -24,9 +24,16 @@ bool GameBoardLayer::init()
     return false;
 }
 
-bool GameBoardLayer::initWithBlockModels(Vector<Vector<Block*>>)
+bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockMetrics)
 {
     //TODO: draw the matrixs according to the model data
+    std::vector<std::vector<Block*>>::iterator rows;
+    for(rows = blockMetrics.begin(); rows!=blockMetrics.end(); ++rows)
+    {
+        BlockView* bv = new BlockView();
+        //bv->initWithModel()
+        bViews.push_back()
+    }
 }
 
 
