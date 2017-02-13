@@ -17,7 +17,21 @@ GameBoardModel::~GameBoardModel()
 
 bool GameBoardModel::init(int row, int col)
 {
-    return true;
+    for(int i=0; i<row; ++i)
+    {
+        std::vector<Block*> vectBlocks;
+        for(int t=0; t<col; ++t)
+        {
+            Block* block = Block::create();
+            block->setCol(t);
+            block->setRow(i);
+            block->setImgIndex(rand()); //TODO: update with specific image index
+            
+            vectBlocks.push_back(block);
+        }
+        
+        m_vtblockMaps.push_back(vectBlocks);
+    }
 }
 
 std::vector<std::vector<Block*>> GameBoardModel::getBlocks()

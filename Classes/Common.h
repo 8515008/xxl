@@ -14,12 +14,7 @@
 
 USING_NS_CC;
 
-class GameBoardToSceneDelegate
-{
-public:
-    virtual void ccTouchesBegan2(CCSet* touches, CCEvent* event)=0;
-    virtual void ccTouchesEnded2(CCSet* touches, CCEvent* event)=0;
-};
+
 
 #endif /* Common_h */
 
