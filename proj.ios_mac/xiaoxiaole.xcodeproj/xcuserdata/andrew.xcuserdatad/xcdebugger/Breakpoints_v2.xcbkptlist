@@ -15,7 +15,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "29"
             endingLineNumber = "29"
-            landmarkName = "BlockView::mappingImage(int imageIndex)"
+            landmarkName = "BlockView:: initWithModel(Block* block)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

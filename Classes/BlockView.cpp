@@ -20,7 +20,8 @@ bool BlockView:: initWithModel(Block* block)
     int bYRow = block->getRow();
     int bImageIndex = block->getImgIndex();
     String imageResource = mappingImage(bImageIndex);
-    this->
+    this = cocos2d::Sprite::create(imageResource);
+    this->setPosition(cocos2d::Vec2(bXCol*)
     //TODO: init the block view
     m_block = block;
     
