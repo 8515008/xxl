@@ -15,16 +15,14 @@
 #include "GameBoardModel.hpp"
 #include "common.h"
 
-class PlayScene : public Layer, public GameBoardToSceneDelegate
+class GameBoardLayer;
+class PlayScene : public Layer
 {
 public:
     static cocos2d::Scene* createScene();
     
     virtual bool init();
-    
-    virtual void ccTouchesBegan2(CCSet* touches, CCEvent* event){}
-    virtual void ccTouchesEnded2(CCSet* touches, CCEvent* event){}
-    
+        
     CREATE_FUNC(PlayScene);
     
 private:

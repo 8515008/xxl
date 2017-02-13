@@ -63,11 +63,3 @@ void GameBoardLayer::update(float dt)
     //TODO: add your code here to update the whole view
 }
 
-
-GameBoardLayer* GameBoardLayer::createGameBoardLayer(GameBoardToSceneDelegate* delegate)
-{
-    auto layer = new GameBoardLayer();
-    layer->viewDelegate = delegate;
-    
-    return layer;
-}

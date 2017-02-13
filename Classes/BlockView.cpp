@@ -8,12 +8,6 @@
 
 #include "BlockView.hpp"
 
-BlockView* BlockView::create()
-{
-    //TODO: create the single block
-    return nullptr;
-}
-
 bool BlockView:: initWithModel(Block* block)
 {
     int bXCol = block->getCol();

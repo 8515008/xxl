@@ -14,30 +14,30 @@
 #include "common.h"
 #include "Block.hpp"
 #include "BlockView.hpp"
+#include "PlayScene.hpp"
 
 USING_NS_CC;
-
+class PlayScene;
 class GameBoardLayer : public Layer
 {
 public:
     GameBoardLayer();
     virtual ~GameBoardLayer();
     
+public:
     virtual bool init();
     bool initWithBlockModels(std::vector<std::vector<Block*>>);
+    
     CREATE_FUNC(GameBoardLayer);
     
 protected:
     virtual void update(float dt);
     
-public:
-    static GameBoardLayer* createGameBoardLayer(GameBoardToSceneDelegate* delegate);
-
 private:
-    GameBoardToSceneDelegate* viewDelegate;
     std::vector<BlockView*> bViews;
     EventListenerTouchOneByOne* m_listener;
     
+    CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
 };
 
 #endif /* GameBoardLayer_hpp */

@@ -18,14 +18,12 @@
 class BlockView : public Sprite
 {
 public:
-    static BlockView* create();
     bool initWithModel(Block* block);
     
-    
+    CREATE_FUNC(BlockView);
 private:
     String mappingImage(int imageIndex);
     Block* m_block;
-    
  };
 
 #endif /* BlockView_hpp */
