@@ -25,6 +25,7 @@ Scene* PlayScene::createScene()
     auto layer = GameBoardLayer::createGameBoardLayer(scene);
     layer->initWithBlockModels(model->getBlocks());
     
+    
     scene->setGameBoardLayer(layer);
     
     scene->addChild(scene->getGameBoardLayer());

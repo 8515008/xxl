@@ -35,6 +35,7 @@ protected:
     
 private:
     std::vector<BlockView*> bViews;
+    EventListenerTouchOneByOne* m_listener;
     
     CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
 };

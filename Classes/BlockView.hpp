@@ -22,6 +22,7 @@ public:
     
     CREATE_FUNC(BlockView);
 private:
+    String mappingImage(int imageIndex);
     Block* m_block;
  };
 

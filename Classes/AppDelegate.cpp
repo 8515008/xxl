@@ -44,6 +44,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = PlayScene::createScene();
+    auto spritecache = SpriteFrameCache::getInstance();
+    spritecache->addSpriteFramesWithFile("blockTiles.plist");
 
     // run
     director->runWithScene(scene);

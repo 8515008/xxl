@@ -10,9 +10,18 @@
 
 bool BlockView:: initWithModel(Block* block)
 {
+    int bXCol = block->getCol();
+    int bYRow = block->getRow();
+    int bImageIndex = block->getImgIndex();
+    String imageResource = mappingImage(bImageIndex);
+    this->
     //TODO: init the block view
     m_block = block;
     
-    
     return true;
+}
+
+String BlockView::mappingImage(int imageIndex)
+{
+    
 }

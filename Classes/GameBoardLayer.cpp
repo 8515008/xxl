@@ -21,6 +21,7 @@ GameBoardLayer::~GameBoardLayer()
 
 bool GameBoardLayer::init()
 {
+    m_listener = EventListenerTouchOneByOne::create();
     return false;
 }
 
@@ -28,12 +29,32 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 {
     //TODO: draw the matrixs according to the model data
     std::vector<std::vector<Block*>>::iterator rows;
-    for(rows = blockMetrics.begin(); rows!=blockMetrics.end(); ++rows)
+    for (auto& rows : blockMetrics)
     {
-        BlockView* bv = new BlockView();
-        //bv->initWithModel()
-        bViews.push_back()
+        for(auto& row : rows)
+        {
+            BlockView* block = BlockView::create();
+            block->initWithModel(row);
+            this->addChild(block);
+            bViews.push_back(block);
+        }
     }
+    m_listener->onTouchBegan = [](Touch* touch, Event* event)
+    {
+        return true;
+    };
+    
+    m_listener->onTouchMoved = [](Touch* touch, Event* event)
+    {
+        
+        return true;
+    };
+    
+    m_listener->onTouchEnded = [](Touch* touch, Event* event)
+    {
+        return true;
+    };
+
 }
 
 
