@@ -23,6 +23,7 @@ public:
     
     
 private:
+    String mappingImage(int imageIndex);
     Block* m_block;
     
  };

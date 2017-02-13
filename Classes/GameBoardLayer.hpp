@@ -36,6 +36,7 @@ public:
 private:
     GameBoardToSceneDelegate* viewDelegate;
     std::vector<BlockView*> bViews;
+    EventListenerTouchOneByOne* m_listener;
     
 };
 
