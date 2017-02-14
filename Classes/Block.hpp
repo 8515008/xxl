@@ -12,14 +12,25 @@
 #include <stdio.h>
 #include "Common.h"
 
+struct XXL_CMD
+{
+    std::string action;
+};
+
 class Block : public cocos2d::Ref
 {
 public:
-    static Block* create();
-    
     Block() {};
     ~Block() {};
-private:
+    
+    bool init() { return true;};
+    
+    CREATE_FUNC(Block);
+    
+public:
+    void moveTo() {};
+    
+    CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);
     CC_SYNTHESIZE(int, m_row, Row);
     CC_SYNTHESIZE(int, m_col, Col);
     CC_SYNTHESIZE(int, m_imgIndex, ImgIndex);

@@ -8,11 +8,3 @@
 
 #include "Block.hpp"
 
-Block* Block::create()
-{
-    auto block = new Block();
-    
-    block->autorelease();
-    
-    return block;
-}

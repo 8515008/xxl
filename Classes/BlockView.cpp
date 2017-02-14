@@ -18,7 +18,7 @@ bool BlockView:: initWithModel(Block* block)
     this->setPosition(cocos2d::Vec2(bXCol*)
     //TODO: init the block view
     m_block = block;
-    
+                          
     return true;
 }
 

@@ -25,13 +25,16 @@ bool GameBoardModel::init(int row, int col)
             Block* block = Block::create();
             block->setCol(t);
             block->setRow(i);
-            block->setImgIndex(rand()); //TODO: update with specific image index
             
             vectBlocks.push_back(block);
         }
         
         m_vtblockMaps.push_back(vectBlocks);
     }
+    
+    //for(const auto& )
+    
+    return true;
 }
 
 std::vector<std::vector<Block*>> GameBoardModel::getBlocks()
