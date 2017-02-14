@@ -13,16 +13,33 @@ bool BlockView:: initWithModel(Block* block)
     int bXCol = block->getCol();
     int bYRow = block->getRow();
     int bImageIndex = block->getImgIndex();
-    String imageResource = mappingImage(bImageIndex);
-    this = cocos2d::Sprite::create(imageResource);
-    this->setPosition(cocos2d::Vec2(bXCol*)
+    std::string imageResource = mappingImage(bImageIndex);
+    this->initWithFile(imageResource);
+    this->setPosition(Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height));
     //TODO: init the block view
     m_block = block;
-    
     return true;
 }
 
-String BlockView::mappingImage(int imageIndex)
+
+
+std::string BlockView::mappingImage(int imageIndex)
 {
-    
+    return "";
+}
+
+void BlockView::update(float data)
+{
+    int newXCol, newYRow;
+    if(m_block!=NULL)
+    {
+        newXCol = m_block->getCol();
+        newYRow = m_block->getRow();
+        auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
+        this->runAction(moveBy);
+    }
+    else
+    {
+        
+    }
 }

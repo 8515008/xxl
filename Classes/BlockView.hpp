@@ -22,8 +22,11 @@ public:
     
     CREATE_FUNC(BlockView);
 private:
-    String mappingImage(int imageIndex);
+    std::string mappingImage(int imageIndex);
     Block* m_block;
+    
+protected:
+    virtual void update(float data);
  };
 
 #endif /* BlockView_hpp */
