@@ -22,7 +22,7 @@ Scene* PlayScene::createScene()
     
     scene->setGameBoardModel(model);
     
-    auto layer = GameBoardLayer::createGameBoardLayer(scene);
+    auto layer = GameBoardLayer::create();
     layer->initWithBlockModels(model->getBlocks());
     
     
