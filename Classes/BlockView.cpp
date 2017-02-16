@@ -25,6 +25,18 @@ bool BlockView:: initWithModel(Block* block)
 
 std::string BlockView::mappingImage(int imageIndex)
 {
+    if(imageIndex == 0)
+    {
+        return "block.jpg";
+    }
+    if(imageIndex == 1)
+    {
+        return "block01.jpg";
+    }
+    if(imageIndex == 2)
+    {
+        return "block02.jpg";
+    }
     return "";
 }
 

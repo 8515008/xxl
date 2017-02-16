@@ -22,7 +22,7 @@ GameBoardLayer::~GameBoardLayer()
 bool GameBoardLayer::init()
 {
     m_listener = EventListenerTouchOneByOne::create();
-    return false;
+    return true;
 }
 
 bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockMetrics)

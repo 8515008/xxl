@@ -25,7 +25,7 @@ bool GameBoardModel::init(int row, int col)
             Block* block = Block::create();
             block->setCol(t);
             block->setRow(i);
-            
+            block->setImgIndex(0);
             vectBlocks.push_back(block);
         }
         
