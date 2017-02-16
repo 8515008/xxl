@@ -16,7 +16,7 @@
 #include "common.h"
 
 class GameBoardLayer;
-class PlayScene : public Layer
+class PlayScene : public Scene
 {
 public:
     static cocos2d::Scene* createScene();
