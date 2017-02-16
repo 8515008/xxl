@@ -32,7 +32,13 @@ bool GameBoardModel::init(int row, int col)
         m_vtblockMaps.push_back(vectBlocks);
     }
     
-    //for(const auto& )
+    for(const auto& vtRow : m_vtblockMaps)
+    {
+        for(const auto& item : vtRow)
+        {
+            
+        }
+    }
     
     return true;
 }

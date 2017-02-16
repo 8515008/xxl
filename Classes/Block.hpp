@@ -17,6 +17,12 @@ struct XXL_CMD
     std::string action;
 };
 
+struct Position
+{
+    int x;
+    int y;
+};
+
 class Block : public cocos2d::Ref
 {
 public:
@@ -28,7 +34,7 @@ public:
     CREATE_FUNC(Block);
     
 public:
-    void moveTo() {};
+    void moveTo(Position pos);
     
     CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);
     CC_SYNTHESIZE(int, m_row, Row);
