@@ -48,3 +48,8 @@ bool PlayScene::init()
     
     return true;
 }
+
+void PlayScene::selectBlock(XXL_Position pos)
+{
+    
+}

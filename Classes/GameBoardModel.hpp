@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 #include "Common.h"
+#include "Block.hpp"
 
 class GameBoardModel
 {
@@ -21,6 +22,10 @@ public:
     
     bool init(int row, int col);
     std::vector<std::vector<Block*>> getBlocks();
+public:
+    void selectBlock(XXL_Position pos);
+private:
+    bool canExplode(XXL_Position pos);
     
 private:
     std::vector<std::vector<Block*>> m_vtblockMaps;

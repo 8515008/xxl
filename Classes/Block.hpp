@@ -12,29 +12,18 @@
 #include <stdio.h>
 #include "Common.h"
 
-struct XXL_CMD
-{
-    std::string action;
-};
-
-struct Position
-{
-    int x;
-    int y;
-};
-
 class Block : public cocos2d::Ref
 {
 public:
     Block() {};
     ~Block() {};
     
-    bool init() { return true;};
+    bool init() { return true;}
     
     CREATE_FUNC(Block);
     
 public:
-    void moveTo(Position pos);
+    void moveTo(XXL_Position pos);
     
     CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);
     CC_SYNTHESIZE(int, m_row, Row);

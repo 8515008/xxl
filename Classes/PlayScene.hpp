@@ -25,6 +25,9 @@ public:
         
     CREATE_FUNC(PlayScene);
     
+public:
+    void selectBlock(XXL_Position pos);
+    
 private:
     CC_SYNTHESIZE(GameBoardLayer*, m_gameboardLayer, GameBoardLayer);
     CC_SYNTHESIZE(GameBoardModel*, m_gameboardModel, GameBoardModel);

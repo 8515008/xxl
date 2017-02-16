@@ -43,6 +43,11 @@ bool GameBoardModel::init(int row, int col)
     return true;
 }
 
+void GameBoardModel::selectBlock(XXL_Position pos)
+{
+    
+}
+
 std::vector<std::vector<Block*>> GameBoardModel::getBlocks()
 {
     return m_vtblockMaps;

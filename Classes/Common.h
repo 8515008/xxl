@@ -10,10 +10,20 @@
 #define Common_h
 
 #include "cocos2d.h"
-#include "Block.hpp"
 
 USING_NS_CC;
 
+
+struct XXL_CMD
+{
+    std::string action;
+};
+
+struct XXL_Position
+{
+    int x;
+    int y;
+};
 
 
 #endif /* Common_h */
