@@ -42,9 +42,5 @@ bool PlayScene::init()
         return false;
     }
     
-    auto rootNode = CSLoader::createNode("MainScene.csb");
-    
-    addChild(rootNode);
-    
     return true;
 }

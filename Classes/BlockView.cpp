@@ -15,7 +15,8 @@ bool BlockView:: initWithModel(Block* block)
     int bImageIndex = block->getImgIndex();
     std::string imageResource = mappingImage(bImageIndex);
     this->initWithFile(imageResource);
-    this->setPosition(Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height));
+    this->setAnchorPoint(Vec2(0,0));
+    this->setPosition(Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height+Director::getInstance()->getVisibleSize().height/2-this->getContentSize().height*3));
     //TODO: init the block view
     m_block = block;
     return true;
