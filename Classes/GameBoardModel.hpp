@@ -26,6 +26,7 @@ public:
     void selectBlock(XXL_Position pos);
 private:
     bool canExplode(XXL_Position pos);
+    int getRandType();
     
 private:
     std::vector<std::vector<Block*>> m_vtblockMaps;

@@ -25,7 +25,7 @@ bool GameBoardModel::init(int row, int col)
             Block* block = Block::create();
             block->setCol(t);
             block->setRow(i);
-            block->setImgIndex(0);
+            //block->setImgIndex(0);
             vectBlocks.push_back(block);
         }
         
@@ -36,7 +36,15 @@ bool GameBoardModel::init(int row, int col)
     {
         for(const auto& item : vtRow)
         {
-            
+            while(1)
+            {
+                item->setImgIndex(getRandType());
+                XXL_Position pos {item->getCol(), item->getRow() };
+                if(!canExplode(pos))
+                {
+                    break;
+                }
+            }
         }
     }
     
@@ -46,6 +54,16 @@ bool GameBoardModel::init(int row, int col)
 void GameBoardModel::selectBlock(XXL_Position pos)
 {
     
+}
+
+bool GameBoardModel::canExplode(XXL_Position pos)
+{
+    return false;
+}
+
+int GameBoardModel::getRandType()
+{
+    return 0;
 }
 
 std::vector<std::vector<Block*>> GameBoardModel::getBlocks()

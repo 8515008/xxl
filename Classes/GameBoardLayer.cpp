@@ -39,6 +39,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
             bViews.push_back(block);
         }
     }
+    
     m_listener->onTouchBegan = [](Touch* touch, Event* event)
     {
         return true;
@@ -46,7 +47,10 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     m_listener->onTouchMoved = [](Touch* touch, Event* event)
     {
-        
+        XXL_Position pos;
+        pos.x = 1;
+        pos.y = 1;
+        this->getController()->selectBlock(pos);
         return true;
     };
     
