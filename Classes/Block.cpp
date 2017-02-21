@@ -8,3 +8,17 @@
 
 #include "Block.hpp"
 
+void Block::moveTo(XXL_Position pos)
+{
+    
+}
+
+void Block::moveToAndBack(XXL_Position pos)
+{
+    
+}
+
+void Block::toExplode()
+{
+    
+}

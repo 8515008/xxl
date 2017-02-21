@@ -13,10 +13,17 @@
 
 USING_NS_CC;
 
+enum XXL_ACTION
+{
+    moveto,
+    explode,
+    
+};
 
 struct XXL_CMD
 {
-    std::string action;
+    XXL_ACTION action;
+    float playtime;
 };
 
 struct XXL_Position
