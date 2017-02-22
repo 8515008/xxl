@@ -14,6 +14,8 @@ bool BlockView:: initWithModel(Block* block)
     int bYRow = block->getRow();
     int bImageIndex = block->getImgIndex();
     std::string imageResource = mappingImage(bImageIndex);
+    //this->initWithFile(imageResource);
+    this->cocos2d::Sprite::create(imageResource);
     this->initWithFile(imageResource);
     this->setAnchorPoint(Vec2(0,0));
     this->setPosition(Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height+Director::getInstance()->getVisibleSize().height/2-this->getContentSize().height*3));

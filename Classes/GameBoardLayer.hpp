@@ -36,8 +36,10 @@ protected:
 private:
     std::vector<BlockView*> bViews;
     EventListenerTouchOneByOne* m_listener;
-    
+    std::vector<BlockView*> blocks;
     CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
+    int i;
+    
 };
 
 #endif /* GameBoardLayer_hpp */
