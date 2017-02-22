@@ -10,9 +10,9 @@
 
 bool BlockView:: initWithModel(Block* block)
 {
-    int bXCol = block->getCol();
-    int bYRow = block->getRow();
-    int bImageIndex = block->getImgIndex();
+    int bXCol = block->getX();
+    int bYRow = block->getY();
+    int bImageIndex = block->getType();
     std::string imageResource = mappingImage(bImageIndex);
     //this->initWithFile(imageResource);
     this->cocos2d::Sprite::create(imageResource);
@@ -48,8 +48,8 @@ void BlockView::update(float data)
     int newXCol, newYRow;
     if(m_block!=NULL)
     {
-        newXCol = m_block->getCol();
-        newYRow = m_block->getRow();
+        newXCol = m_block->getX();
+        newYRow = m_block->getY();
         auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
         this->runAction(moveBy);
     }

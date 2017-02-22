@@ -23,12 +23,17 @@ public:
     CREATE_FUNC(Block);
     
 public:
+    bool isEmpty() {return 0==m_type; }
     void moveTo(XXL_Position pos);
+    void moveToAndBack(XXL_Position pos);
+    void toExplode();
+    
+    
     
     CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);
-    CC_SYNTHESIZE(int, m_row, Row);
-    CC_SYNTHESIZE(int, m_col, Col);
-    CC_SYNTHESIZE(int, m_imgIndex, ImgIndex);
+    CC_SYNTHESIZE(int, m_x, X);
+    CC_SYNTHESIZE(int, m_y, Y);
+    CC_SYNTHESIZE(int, m_type, Type);
 };
 
 #endif /* Block_hpp */

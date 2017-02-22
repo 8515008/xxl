@@ -202,7 +202,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "188"
-            endingLineNumber = "188">
+            endingLineNumber = "188"
+            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -597,22 +599,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "169"
             endingLineNumber = "169"
-            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509346779.924139"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
