@@ -450,54 +450,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509343429.446462"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)::$_0::operator()(cocos2d::Touch*, cocos2d::Event*) const"
-                  moduleName = "xiaoxiaole-mobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
-                  timestampString = "509343114.791093"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)::$_0::operator()(cocos2d::Touch*, cocos2d::Event*) const"
-                  moduleName = "xiaoxiaole-mobile"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
-                  timestampString = "509343114.794852"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
-                  offsetFromSymbolStart = "369">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../Classes/GameBoardLayer.cpp"
             timestampString = "509345472.96465"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

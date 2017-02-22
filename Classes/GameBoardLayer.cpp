@@ -105,13 +105,8 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     blocks = bViews;
     
     controller = m_controller;
-<<<<<<< HEAD
     
     m_listener->onTouchBegan = [blocks](Touch* touch, Event* event)
-=======
- 
-    m_listener->onTouchBegan = [](Touch* touch, Event* event)
->>>>>>> 7b2e43ccf45765a6c3267821d5e7b17b05bdbfda
     {
         
         for(auto& item : blocks)
