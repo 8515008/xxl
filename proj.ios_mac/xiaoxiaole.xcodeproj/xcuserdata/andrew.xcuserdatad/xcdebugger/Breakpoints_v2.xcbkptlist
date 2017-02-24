@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/BlockView.hpp"
-            timestampString = "508739579.462087"
+            timestampString = "509602074.956074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "class BlockView"
             landmarkType = "3">
          </BreakpointContent>
@@ -100,15 +100,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509258223.384063"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -134,11 +134,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509346557.23601"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509258223.384063"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -182,11 +182,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509429357.274936"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -198,11 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509429357.274936"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -214,11 +214,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -230,11 +230,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
             <Locations>
@@ -370,11 +370,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509346779.924139"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -386,11 +386,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -402,11 +402,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -418,11 +418,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -434,11 +434,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -450,11 +450,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -466,11 +466,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -482,11 +482,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345472.96465"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -514,11 +514,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509345644.606976"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -530,11 +530,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509346779.924139"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -546,11 +546,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509346779.924139"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
             landmarkType = "7">
          </BreakpointContent>
@@ -562,12 +562,156 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/GameBoardLayer.cpp"
-            timestampString = "509428901.613867"
+            timestampString = "509602953.895113"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/GameBoardLayer.cpp"
+            timestampString = "509515806.303121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)"
+                  moduleName = "xiaoxiaole-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
+                  timestampString = "509432345.878028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)"
+                  moduleName = "xiaoxiaole-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
+                  timestampString = "509432345.881029"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "94"
+                  endingLineNumber = "94"
+                  offsetFromSymbolStart = "704">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/GameBoardLayer.cpp"
+            timestampString = "509515806.303121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/GameBoardLayer.cpp"
+            timestampString = "509515806.303121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/GameBoardLayer.cpp"
+            timestampString = "509602388.65338"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "GameBoardLayer::initWithBlockModels(std::vector&lt;std::vector&lt;Block*&gt;&gt; blockMetrics)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)"
+                  moduleName = "xiaoxiaole-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
+                  timestampString = "509515329.41536"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "851">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GameBoardLayer::initWithBlockModels(std::__1::vector&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt;, std::__1::allocator&lt;std::__1::vector&lt;Block*, std::__1::allocator&lt;Block*&gt; &gt; &gt; &gt;)"
+                  moduleName = "xiaoxiaole-mobile"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrew/Code/xxl/xxl/Classes/GameBoardLayer.cpp"
+                  timestampString = "509515329.418858"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "1261">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/BlockView.cpp"
+            timestampString = "509602997.244774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "BlockView:: initWithModel(Block* block)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

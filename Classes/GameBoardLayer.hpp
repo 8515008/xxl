@@ -38,6 +38,7 @@ private:
     EventListenerTouchOneByOne* m_listener;
     std::vector<BlockView*> blocks;
     CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
+    std::string mappingImage(int imageIndex);
     int i;
     
 };

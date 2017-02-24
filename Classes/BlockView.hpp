@@ -25,6 +25,7 @@ private:
     std::string mappingImage(int imageIndex);
     Block* m_block;
     
+    
 protected:
     virtual void update(float data);
  };

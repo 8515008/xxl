@@ -88,18 +88,36 @@ bool GameBoardLayer::init()
 bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockMetrics)
 {
     //TODO: draw the matrixs according to the model data
+    //Vec2 startPoint = Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height+Director::getInstance()->getVisibleSize().height/2-this->getContentSize().height*3);
+    u_long ySize = blockMetrics.size();
+    u_long xSize = (*blockMetrics.begin()).size();
     std::vector<std::vector<Block*>>::iterator rows;
     std::vector<BlockView*> blocks;
     PlayScene* controller;
+    long x=0, y=0;
+    float screenHeight = Director::getInstance()->getVisibleSize().height;
+    float screenWidth = Director::getInstance()->getVisibleSize().width;
+    long xTemp;
     for (auto& rows : blockMetrics)
     {
         for(auto& row : rows)
         {
             BlockView* block = BlockView::create();
             block->initWithModel(row);
+            if(xTemp != x)
+            {
+                xTemp = x;
+                y = 0;
+            }
+            float xWidth = block->getContentSize().width;
+            float yHeight = block->getContentSize().height;
+            block->setAnchorPoint(Vec2(0,0));
+            block->setPosition(Vec2(screenWidth/2-(xSize/2+x)*xWidth, screenHeight/2-(ySize/2+y)*yHeight));
             this->addChild(block);
             bViews.push_back(block);
+            ++y;
         }
+        ++x;
     }
 
     blocks = bViews;
@@ -137,7 +155,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
         {
             if(item->getBoundingBox().containsPoint(touchPoints))
             {
-                item->
+                //item->
             }
         }
         /*
@@ -196,6 +214,23 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     _eventDispatcher->addEventListenerWithSceneGraphPriority(m_listener, this);
 
     return true;
+}
+
+std::string GameBoardLayer::mappingImage(int imageIndex)
+{
+    if(imageIndex == 0)
+    {
+        return "block.jpg";
+    }
+    if(imageIndex == 1)
+    {
+        return "block01.jpg";
+    }
+    if(imageIndex == 2)
+    {
+        return "block02.jpg";
+    }
+    return "";
 }
 
 
