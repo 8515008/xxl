@@ -54,18 +54,21 @@ void BlockView::update(float data)
             auto firstcmd = vtcmd.begin();
             switch((*firstcmd).action)
             {
-                case XXL_ACTION::moveto:
+                case XXL_ACTION::moveto:{
+                    newX = m_block->getX();
+                    newY = m_block->getY();
+                    auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
+                    this->runAction(moveBy);
+                }
                     break;
-                case XXL_ACTION::explode:
+                case XXL_ACTION::explode:{
+                    
+                }
                     break;
                 default:
                     break;
             }
-            
-        newX = m_block->getX();
-        newY = m_block->getY();
-        auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
-        this->runAction(moveBy);
+
         }
     }
     else
