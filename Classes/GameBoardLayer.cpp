@@ -8,6 +8,8 @@
 
 #include "cocos2d.h"
 #include "GameBoardLayer.hpp"
+#include <algorithm>
+#include <vector>
 
 GameBoardLayer::GameBoardLayer()
 {

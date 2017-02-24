@@ -20,12 +20,6 @@ enum XXL_ACTION
     
 };
 
-struct XXL_CMD
-{
-    XXL_ACTION action;
-    float playtime;
-};
-
 struct XXL_Position
 {
     int x;
@@ -33,6 +27,15 @@ struct XXL_Position
     int xDirection;
     int yDirection;
 };
+
+
+struct XXL_CMD
+{
+    XXL_ACTION action;
+    float playtime;
+    XXL_Position pos;
+};
+
 
 
 #endif /* Common_h */

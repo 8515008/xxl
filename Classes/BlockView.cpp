@@ -45,13 +45,31 @@ std::string BlockView::mappingImage(int imageIndex)
 
 void BlockView::update(float data)
 {
-    int newXCol, newYRow;
-    if(m_block!=NULL)
+    int newX, newY;
+    if(nullptr != m_block)
     {
-        newXCol = m_block->getX();
-        newYRow = m_block->getY();
-        auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
-        this->runAction(moveBy);
+        auto vtcmd = m_block->getCmd();
+        if(vtcmd.size() > 0)
+        {
+            auto firstcmd = vtcmd.begin();
+            switch((*firstcmd).action)
+            {
+                case XXL_ACTION::moveto:{
+                    newX = m_block->getX();
+                    newY = m_block->getY();
+                    auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
+                    this->runAction(moveBy);
+                }
+                    break;
+                case XXL_ACTION::explode:{
+                    
+                }
+                    break;
+                default:
+                    break;
+            }
+
+        }
     }
     else
     {
