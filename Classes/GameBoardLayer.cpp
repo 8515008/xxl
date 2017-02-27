@@ -8,8 +8,6 @@
 
 #include "cocos2d.h"
 #include "GameBoardLayer.hpp"
-#include <algorithm>
-#include <vector>
 
 GameBoardLayer::GameBoardLayer()
 {
@@ -91,35 +89,37 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 {
     //TODO: draw the matrixs according to the model data
     //Vec2 startPoint = Vec2(bXCol*this->getContentSize().width, bYRow*this->getContentSize().height+Director::getInstance()->getVisibleSize().height/2-this->getContentSize().height*3);
-    u_long ySize = blockMetrics.size();
-    u_long xSize = (*blockMetrics.begin()).size();
+    float ySize = blockMetrics.size();
+    float xSize = (*blockMetrics.begin()).size();
     std::vector<std::vector<Block*>>::iterator rows;
     std::vector<BlockView*> blocks;
     PlayScene* controller;
-    long x=0, y=0;
+    float x=0, y=0;
     float screenHeight = Director::getInstance()->getVisibleSize().height;
     float screenWidth = Director::getInstance()->getVisibleSize().width;
-    long xTemp;
+    float yTemp;
     for (auto& rows : blockMetrics)
     {
         for(auto& row : rows)
         {
             BlockView* block = BlockView::create();
             block->initWithModel(row);
-            if(xTemp != x)
+            if(yTemp != y)
             {
-                xTemp = x;
-                y = 0;
+                yTemp = y;
+                x = 0;
             }
             float xWidth = block->getContentSize().width;
             float yHeight = block->getContentSize().height;
             block->setAnchorPoint(Vec2(0,0));
-            block->setPosition(Vec2(screenWidth/2-(xSize/2+x)*xWidth, screenHeight/2-(ySize/2+y)*yHeight));
+            float blockX = screenWidth/2+(x-xSize/2)*xWidth;
+            float blockY = screenHeight/2+(y-ySize/2)*yHeight;
+            block->setPosition(Vec2(blockX, blockY));
             this->addChild(block);
             bViews.push_back(block);
-            ++y;
+            ++x;
         }
-        ++x;
+        ++y;
     }
 
     blocks = bViews;
@@ -157,55 +157,11 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
         {
             if(item->getBoundingBox().containsPoint(touchPoints))
             {
-                //item->
+                pos.x = item->getBlockX();
+                pos.y = item->getBlockY();
             }
         }
-        /*
-        XXL_Position pos;
-        for(auto& item : blocks)
-        {
-            if(item->getBoundingBox().containsPoint(Director::getInstance()->convertToGL(touch->getLocationInView())))
-            {
-                auto originalX = touch->getLocation().x;
-                auto startX = touch->getStartLocation().x;
-                auto xMovedLength = originalX - startX;
-                auto yMovedLength = touch->getLocation().y-touch->getStartLocation().y;
-                MoveBy* moveBy;
-                float wi = 0-(item->getContentSize().width);
-                if((std::abs(xMovedLength) > std::abs(yMovedLength)))
-                {
-                    pos.xDirection = xMovedLength;
-                    if(xMovedLength > 0)
-                    {
-                        moveBy = MoveBy::create(0.5, Vec2(item->getContentSize().width, 0));
-                    }
-                    else
-                    {
-                        moveBy = MoveBy::create(0.5, Vec2((0-item->getContentSize().width), 0));
-                    }
-                }
-                else
-                {
-                    pos.yDirection = yMovedLength;
-                    if(yMovedLength > 0)
-                    {
-                        moveBy = MoveBy::create(0.5, Vec2(0, item->getContentSize().height));
-                    }
-                    else
-                    {
-                        moveBy = MoveBy::create(0.5, Vec2(0, (0-item->getContentSize().height)));
-                    }
-                }
-                item->runAction(moveBy);
-                pos.x = (item->getPositionX())/(item->getContentSize().width);
-                pos.y = (item->getPositionY()-(Director::getInstance()->getVisibleSize().height/2-item->getContentSize().height*3))/(item->getContentSize().height);
-                controller->selectBlock(pos);
-                
-                return true;
-            }
-        }
-        */
-        
+        controller->selectBlock(pos);
         return true;
     };
     
@@ -217,24 +173,6 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 
     return true;
 }
-
-std::string GameBoardLayer::mappingImage(int imageIndex)
-{
-    if(imageIndex == 0)
-    {
-        return "block.jpg";
-    }
-    if(imageIndex == 1)
-    {
-        return "block01.jpg";
-    }
-    if(imageIndex == 2)
-    {
-        return "block02.jpg";
-    }
-    return "";
-}
-
 
 void GameBoardLayer::update(float dt)
 {

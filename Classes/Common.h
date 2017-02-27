@@ -24,8 +24,6 @@ struct XXL_Position
 {
     int x;
     int y;
-    int xDirection;
-    int yDirection;
 };
 
 

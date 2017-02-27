@@ -19,12 +19,13 @@ class BlockView : public Sprite
 {
 public:
     bool initWithModel(Block* block);
+    int getBlockX();
+    int getBlockY();
     
     CREATE_FUNC(BlockView);
 private:
     std::string mappingImage(int imageIndex);
     Block* m_block;
-    
     
 protected:
     virtual void update(float data);

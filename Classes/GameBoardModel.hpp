@@ -29,7 +29,7 @@ private:
     int getRandType();
     
 private:
-    const int BLOCKTYPE_NUM = 6;
+    const int BLOCKTYPE_NUM = 2;
     std::vector<std::vector<Block*>> m_vtblockMaps;
     
 };
