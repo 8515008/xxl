@@ -13,7 +13,17 @@ GameBoardModel::GameBoardModel()
 {}
 
 GameBoardModel::~GameBoardModel()
-{}
+{
+/*
+    for(const auto& Yaxis : m_vtblockMaps)
+    {
+        for(const auto& item : Yaxis)
+        {
+            item->release();
+        }
+    }
+ */
+}
 
 bool GameBoardModel::init(int row, int col)
 {
@@ -23,6 +33,8 @@ bool GameBoardModel::init(int row, int col)
         for(int t=0; t<col; ++t)
         {
             Block* block = Block::create();
+            //block->retain();
+            
             block->setX(t);
             block->setY(i);
             vectBlocks.push_back(block);
@@ -31,9 +43,9 @@ bool GameBoardModel::init(int row, int col)
         m_vtblockMaps.push_back(vectBlocks);
     }
     
-    for(const auto& vtRow : m_vtblockMaps)
+    for(const auto& Yaxis : m_vtblockMaps)
     {
-        for(const auto& item : vtRow)
+        for(const auto& item : Yaxis)
         {
             while(1)
             {

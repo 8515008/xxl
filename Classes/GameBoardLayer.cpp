@@ -22,6 +22,7 @@ GameBoardLayer::~GameBoardLayer()
 bool GameBoardLayer::init()
 {
     m_listener = EventListenerTouchOneByOne::create();
+    m_listener->setSwallowTouches(false);
     return true;
 }
 
@@ -42,6 +43,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
         for(auto& row : rows)
         {
             BlockView* block = BlockView::create();
+            row->retain();
             block->initWithModel(row);
             if(yTemp != y)
             {
@@ -65,13 +67,17 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     controller = m_controller;
     
-    m_listener->onTouchBegan = [blocks](Touch* touch, Event* event)
+    m_listener->onTouchBegan = [](Touch* touch, Event* event)
     {
+        auto target = static_cast<GameBoardLayer*>(event->getCurrentTarget());
+        
         return true;
     };
     
     m_listener->onTouchMoved = [blocks, controller](Touch* touch, Event* event)
     {
+
+        
         XXL_Position pos;
         Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
         for(auto& item : blocks)

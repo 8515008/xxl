@@ -17,7 +17,7 @@ Scene* PlayScene::createScene()
     auto scene = PlayScene::create();
     
     
-    auto model = new GameBoardModel();
+    auto model = GameBoardModel::create();
     model->init(6,6);
     
     scene->setGameBoardModel(model);

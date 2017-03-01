@@ -75,12 +75,10 @@ void BlockView::update(float data)
 
 int BlockView::getBlockX()
 {
-    Block* b;
-    b = this->m_block;
-    return b->getX();
+    return m_block->getX();
 }
 
 int BlockView::getBlockY()
 {
-    return this->m_block->getY();
+    return m_block->getY();
 }
