@@ -14,11 +14,15 @@
 #include "Common.h"
 #include "Block.hpp"
 
-class GameBoardModel
+class GameBoardModel : public cocos2d::Ref
 {
 public:
     GameBoardModel();
     ~GameBoardModel();
+    
+    bool init() { return true;}
+    
+    CREATE_FUNC(GameBoardModel);
     
     bool init(int row, int col);
     std::vector<std::vector<Block*>> getBlocks();
