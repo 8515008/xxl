@@ -31,8 +31,6 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     float ySize = blockMetrics.size();
     float xSize = (*blockMetrics.begin()).size();
     std::vector<std::vector<Block*>>::iterator rows;
-    std::vector<BlockView*> blocks;
-    PlayScene* controller;
     float x=0, y=0;
     float screenHeight = Director::getInstance()->getVisibleSize().height;
     float screenWidth = Director::getInstance()->getVisibleSize().width;
@@ -60,21 +58,17 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
         }
         ++y;
     }
-
-    blocks = bViews;
     
-    controller = m_controller;
-    
-    m_listener->onTouchBegan = [blocks](Touch* touch, Event* event)
+    m_listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
         return true;
     };
     
-    m_listener->onTouchMoved = [blocks, controller](Touch* touch, Event* event)
+    m_listener->onTouchMoved = [this](Touch* touch, Event* event)
     {
         XXL_Position pos;
         Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
-        for(auto& item : blocks)
+        for(auto& item : bViews)
         {
             if(item->getBoundingBox().containsPoint(touchPoints))
             {
@@ -82,7 +76,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
                 pos.y = item->getBlockY();
             }
         }
-        controller->selectBlock(pos);
+        m_controller->selectBlock(pos);
         return true;
     };
     

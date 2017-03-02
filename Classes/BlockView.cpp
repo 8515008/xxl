@@ -10,8 +10,6 @@
 
 bool BlockView:: initWithModel(Block* block)
 {
-    int bXCol = block->getX();
-    int bYRow = block->getY();
     int bImageIndex = block->getType();
     std::string imageResource = mappingImage(bImageIndex);
     this->cocos2d::Sprite::create(imageResource);
@@ -19,7 +17,6 @@ bool BlockView:: initWithModel(Block* block)
     m_block = block;
     return true;
 }
-
 
 
 std::string BlockView::mappingImage(int imageIndex)
@@ -75,9 +72,7 @@ void BlockView::update(float data)
 
 int BlockView::getBlockX()
 {
-    Block* b;
-    b = this->m_block;
-    return b->getX();
+    return this->m_block->getX();
 }
 
 int BlockView::getBlockY()
