@@ -12,7 +12,10 @@ bool BlockView:: initWithModel(Block* block)
 {
     int bImageIndex = block->getType();
     std::string imageResource = mappingImage(bImageIndex);
-    this->cocos2d::Sprite::create(imageResource);
+    this->cocos2d::Sprite::initWithSpriteFrameName(imageResource);
+    Rect* rec = new Rect();
+    rec->setRect(0, 0, 200, 200);
+    this->Sprite::create(imageResource, *rec);
     this->initWithFile(imageResource);
     m_block = block;
     return true;
@@ -23,15 +26,15 @@ std::string BlockView::mappingImage(int imageIndex)
 {
     if(imageIndex == 0)
     {
-        return "block.jpg";
+        return "block_Yellow.jpg";
     }
     if(imageIndex == 1)
     {
-        return "block.jpg";
+        return "block_Red.jpg";
     }
     if(imageIndex == 2)
     {
-        return "block.jpg";
+        return "block_Green.jpg";
     }
     return "";
 }
@@ -72,11 +75,7 @@ void BlockView::update(float data)
 
 int BlockView::getBlockX()
 {
-<<<<<<< HEAD
-    return this->m_block->getX();
-=======
     return m_block->getX();
->>>>>>> 4d7d832fb82cff0198c9166e619dfaac4f8f7886
 }
 
 int BlockView::getBlockY()

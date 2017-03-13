@@ -39,6 +39,8 @@ private:
     std::vector<BlockView*> blocks;
     CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
     std::string mappingImage(int imageIndex);
+    void createAndDropBlocks(BlockView* block);
+    Point positionOfItem(BlockView* block);
     int i;
     
 };
