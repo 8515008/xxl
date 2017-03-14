@@ -18,6 +18,9 @@
 		46880B8B19C43A87006E1F66 /* HomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HomeScene.cpp */; };
 		49ECFB1C1E6D16A50098594C /* xxlResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB1A1E6D16A50098594C /* xxlResource.plist */; };
 		49ECFB1D1E6D16A50098594C /* xxlResource.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB1B1E6D16A50098594C /* xxlResource.png */; };
+		49ECFB221E77A3B00098594C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB1F1E77A3B00098594C /* background.png */; };
+		49ECFB231E77A3B00098594C /* sushi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB201E77A3B00098594C /* sushi.plist */; };
+		49ECFB241E77A3B00098594C /* sushi.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB211E77A3B00098594C /* sushi.pvr.ccz */; };
 		4F774CC79BAEBF19EAF37C5B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D423469DB14A9DB23B9F1DBD /* libcocos2d Mac.a */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
@@ -84,6 +87,9 @@
 		46880B8719C43A87006E1F66 /* HomeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScene.h; sourceTree = "<group>"; };
 		49ECFB1A1E6D16A50098594C /* xxlResource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xxlResource.plist; sourceTree = "<group>"; };
 		49ECFB1B1E6D16A50098594C /* xxlResource.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xxlResource.png; sourceTree = "<group>"; };
+		49ECFB1F1E77A3B00098594C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		49ECFB201E77A3B00098594C /* sushi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sushi.plist; sourceTree = "<group>"; };
+		49ECFB211E77A3B00098594C /* sushi.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = sushi.pvr.ccz; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -258,6 +264,9 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49ECFB1F1E77A3B00098594C /* background.png */,
+				49ECFB201E77A3B00098594C /* sushi.plist */,
+				49ECFB211E77A3B00098594C /* sushi.pvr.ccz */,
 				49ECFB1A1E6D16A50098594C /* xxlResource.plist */,
 				49ECFB1B1E6D16A50098594C /* xxlResource.png */,
 				629949999B235C9EF66624EA /* res */,
@@ -463,11 +472,14 @@
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				49ECFB221E77A3B00098594C /* background.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				49ECFB241E77A3B00098594C /* sushi.pvr.ccz in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				49ECFB231E77A3B00098594C /* sushi.plist in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,

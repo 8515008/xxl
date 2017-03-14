@@ -26,15 +26,27 @@ std::string BlockView::mappingImage(int imageIndex)
 {
     if(imageIndex == 0)
     {
-        return "block_Yellow.jpg";
+        return "sushi_1n.png";
     }
     if(imageIndex == 1)
     {
-        return "block_Red.jpg";
+        return "sushi_2n.png";
     }
     if(imageIndex == 2)
     {
-        return "block_Green.jpg";
+        return "sushi_3n.png";
+    }
+    if(imageIndex == 3)
+    {
+        return "sushi_4n.png";
+    }
+    if(imageIndex == 4)
+    {
+        return "sushi_5n.png";
+    }
+    if(imageIndex == 5)
+    {
+        return "sushi_6n.png";
     }
     return "";
 }

@@ -23,7 +23,7 @@ bool GameBoardLayer::init()
 {
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(false);
-    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("xxlResource.plist");
+    SpriteFrameCache::getInstance()->addSpriteFramesWithFile("sushi.plist");
     return true;
 }
 

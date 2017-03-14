@@ -29,7 +29,11 @@ Scene* PlayScene::createScene()
     
     scene->setGameBoardLayer(layer);
     
-    scene->addChild(scene->getGameBoardLayer());
+    scene->addChild(scene->getGameBoardLayer(),1);
+    auto background = Sprite::create("background.png");
+    background->setAnchorPoint(Point(0, 1));
+    background->setPosition(Point(0, Director::getInstance()->getWinSize().height));
+    scene->addChild(background,0);
 
     return (Scene*)scene;
 }
