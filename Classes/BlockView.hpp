@@ -25,6 +25,7 @@ public:
     CREATE_FUNC(BlockView);
 private:
     std::string mappingImage(int imageIndex);
+    void explode();
     Block* m_block;
     
 protected:

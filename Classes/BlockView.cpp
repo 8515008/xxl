@@ -94,3 +94,8 @@ int BlockView::getBlockY()
 {
     return m_block->getY();
 }
+
+void BlockView::explode()
+{
+    
+}
