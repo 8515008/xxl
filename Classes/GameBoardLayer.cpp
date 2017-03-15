@@ -24,6 +24,7 @@ bool GameBoardLayer::init()
     m_listener = EventListenerTouchOneByOne::create();
     m_listener->setSwallowTouches(false);
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("sushi.plist");
+    scheduleUpdate();
     return true;
 }
 
@@ -107,5 +108,8 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 
 void GameBoardLayer::update(float dt)
 {
-    //TODO: add your code here to update the whole view
+    for(auto& item : bViews)
+    {
+        item->update(dt);
+    }
 }

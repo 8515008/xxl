@@ -28,7 +28,7 @@ private:
     void explode();
     Block* m_block;
     
-protected:
+public:
     virtual void update(float data);
  };
 
