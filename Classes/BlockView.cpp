@@ -2,7 +2,7 @@
 //  BlockView.cpp
 //  xiaoxiaole
 //
-//  Created by test on 2017/1/23.
+//  Created by Andrew on 2017/1/23.
 //
 //
 
@@ -12,11 +12,7 @@ bool BlockView:: initWithModel(Block* block)
 {
     int bImageIndex = block->getType();
     std::string imageResource = mappingImage(bImageIndex);
-    this->cocos2d::Sprite::initWithSpriteFrameName(imageResource);
-    Rect* rec = new Rect();
-    rec->setRect(0, 0, 200, 200);
-    this->Sprite::create(imageResource, *rec);
-    this->initWithFile(imageResource);
+    this->initWithSpriteFrameName(imageResource);
     m_block = block;
     return true;
 }
@@ -97,5 +93,38 @@ int BlockView::getBlockY()
 
 void BlockView::explode()
 {
+    float time = 0.3;
     
+    // 1. action for sushi
+    this->runAction(Sequence::create(
+                                      ScaleTo::create(time, 0.0),
+                                      CallFuncN::create(CC_CALLBACK_1(BlockView::actionEndCallback, this)),
+                                      NULL));
+    
+    // 2. action for circle
+    auto circleSprite = Sprite::create("circle.png");
+    addChild(circleSprite, 10);
+    circleSprite->setPosition(this->getPosition());
+    circleSprite->setScale(0);// start size
+    circleSprite->runAction(Sequence::create(ScaleTo::create(time, 1.0),
+                                             CallFunc::create(CC_CALLBACK_0(Sprite::removeFromParent, circleSprite)),
+                                             NULL));
+    
+    // 3. particle effect
+    auto particleStars = ParticleSystemQuad::create("stars.plist");
+    particleStars->setAutoRemoveOnFinish(true);
+    particleStars->setBlendAdditive(false);
+    particleStars->setPosition(this->getPosition());
+    particleStars->setScale(0.3);
+    addChild(particleStars, 20);
+}
+
+void BlockView::actionEndCallback(Node *node)
+{
+    node->removeFromParent();
+}
+
+void BlockView::scheduleUpdate(float data)
+{
+    update(data);
 }

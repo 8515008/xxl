@@ -21,14 +21,18 @@ public:
     bool initWithModel(Block* block);
     int getBlockX();
     int getBlockY();
+    void scheduleUpdate(float data);
     
     CREATE_FUNC(BlockView);
+    
 private:
     std::string mappingImage(int imageIndex);
     void explode();
+    void actionEndCallback(Node *node);
+    
     Block* m_block;
     
-public:
+protected:
     virtual void update(float data);
  };
 

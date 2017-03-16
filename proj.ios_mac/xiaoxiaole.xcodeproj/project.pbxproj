@@ -21,6 +21,8 @@
 		49ECFB221E77A3B00098594C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB1F1E77A3B00098594C /* background.png */; };
 		49ECFB231E77A3B00098594C /* sushi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB201E77A3B00098594C /* sushi.plist */; };
 		49ECFB241E77A3B00098594C /* sushi.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB211E77A3B00098594C /* sushi.pvr.ccz */; };
+		49ECFB271E7A47980098594C /* stars.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB251E7A47980098594C /* stars.plist */; };
+		49ECFB281E7A47980098594C /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 49ECFB261E7A47980098594C /* stars.png */; };
 		4F774CC79BAEBF19EAF37C5B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D423469DB14A9DB23B9F1DBD /* libcocos2d Mac.a */; };
 		503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 503AE0F617EB97AB00D1A890 /* Icon.icns */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
@@ -90,6 +92,8 @@
 		49ECFB1F1E77A3B00098594C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		49ECFB201E77A3B00098594C /* sushi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sushi.plist; sourceTree = "<group>"; };
 		49ECFB211E77A3B00098594C /* sushi.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = sushi.pvr.ccz; sourceTree = "<group>"; };
+		49ECFB251E7A47980098594C /* stars.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = stars.plist; sourceTree = "<group>"; };
+		49ECFB261E7A47980098594C /* stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars.png; sourceTree = "<group>"; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 		503AE0F717EB97AB00D1A890 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
@@ -264,6 +268,8 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				49ECFB251E7A47980098594C /* stars.plist */,
+				49ECFB261E7A47980098594C /* stars.png */,
 				49ECFB1F1E77A3B00098594C /* background.png */,
 				49ECFB201E77A3B00098594C /* sushi.plist */,
 				49ECFB211E77A3B00098594C /* sushi.pvr.ccz */,
@@ -470,6 +476,7 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				49ECFB281E7A47980098594C /* stars.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				49ECFB221E77A3B00098594C /* background.png in Resources */,
@@ -479,6 +486,7 @@
 				49ECFB241E77A3B00098594C /* sushi.pvr.ccz in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				49ECFB271E7A47980098594C /* stars.plist in Resources */,
 				49ECFB231E77A3B00098594C /* sushi.plist in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,

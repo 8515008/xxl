@@ -110,6 +110,6 @@ void GameBoardLayer::update(float dt)
 {
     for(auto& item : bViews)
     {
-        item->update(dt);
+        item->scheduleUpdate(dt);
     }
 }
