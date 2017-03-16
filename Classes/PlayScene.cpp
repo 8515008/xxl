@@ -52,5 +52,5 @@ bool PlayScene::init()
 
 void PlayScene::selectBlock(XXL_Position pos)
 {
-    
+    this->getGameBoardModel()->selectBlock(pos);
 }
