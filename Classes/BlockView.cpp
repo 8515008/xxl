@@ -66,7 +66,7 @@ void BlockView::update(float data)
                 }
                     break;
                 case XXL_ACTION::explode:{
-                    
+                    explode();
                 }
                     break;
                 default:

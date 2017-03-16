@@ -36,9 +36,6 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     //std::vector<std::vector<Block*>>::iterator rows;
     float x=0, y=0; //重新创建数组的x和y
     Size winSize = Director::getInstance()->getWinSize();
-    
-    //float screenHeight = Director::getInstance()->getVisibleSize().height;
-    //float screenWidth = Director::getInstance()->getVisibleSize().width;
 
     float yTemp;
     for (auto& rows : blockMetrics)
@@ -53,10 +50,6 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
                 yTemp = y;
                 x = 0;
             }
-            //float xWidth = block->getContentSize().width;
-            //float yHeight = block->getContentSize().height;
-            //float blockX = screenWidth/2+(x-xSize/2)*xWidth;
-            //float blockY = screenHeight/2+(y-ySize/2)*yHeight;
             
             float blockX = winSize.width/2 + block->getContentSize().width * (x+(1-xSize)/2);
             float blockY = winSize.height/2 + block->getContentSize().height * (y+(1-ySize)/2);
