@@ -55,12 +55,12 @@ void BlockView::update(float data)
         auto vtcmd = m_block->getCmd();
         if(vtcmd.size() > 0)
         {
-            auto firstcmd = vtcmd.begin();
-            switch((*firstcmd).action)
+            auto firstcmd = (*vtcmd.begin());
+            switch(firstcmd.action)
             {
                 case XXL_ACTION::moveto:{
-                    newX = m_block->getX();
-                    newY = m_block->getY();
+                    newX = firstcmd.pos.x;
+                    newY = firstcmd.pos.y;
                     auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
                     this->runAction(moveBy);
                 }
@@ -72,6 +72,9 @@ void BlockView::update(float data)
                 default:
                     break;
             }
+            
+            
+            vtcmd.erase(vtcmd.begin());
 
         }
     }

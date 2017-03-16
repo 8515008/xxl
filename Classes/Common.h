@@ -17,7 +17,7 @@ enum XXL_ACTION
 {
     moveto,
     explode,
-    
+    explodeline,
 };
 
 struct XXL_Position

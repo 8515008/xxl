@@ -29,13 +29,17 @@ public:
 public:
     void selectBlock(XXL_Position pos);
 private:
+    void getYNeighbor(XXL_Position pos, std::list<Block*> &listSameImage);
+    void getXNeighbor(XXL_Position pos, std::list<Block*> &listSameImage);
     bool canExplode(XXL_Position pos);
+    void swapBlock(XXL_Position lastpos, XXL_Position pos);
     int getRandType();
     
 private:
+    XXL_Position m_lastpos;
     const int BLOCKTYPE_NUM = 5;
     std::vector<std::vector<Block*>> m_vtblockMaps;
-    
+    std::list<Block*> m_lstblockRemoving;
 };
 
 #endif /* GameBoardModel_hpp */
