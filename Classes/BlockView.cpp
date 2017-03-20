@@ -61,6 +61,8 @@ void BlockView::update(float data)
                 case XXL_ACTION::moveto:{
                     newX = firstcmd.pos.x;
                     newY = firstcmd.pos.y;
+                    auto width = this->getContentSize().width;
+                    auto height = this->getContentSize().height;
                     auto moveBy = MoveBy::create(0.5, Vec2(this->getContentSize().width, this->getContentSize().height));
                     this->runAction(moveBy);
                 }

@@ -41,6 +41,7 @@ bool GameBoardModel::init(int row, int col)
             
             block->setX(t);
             block->setY(i);
+            this->retain();
             vectBlocks.push_back(block);
         }
         
