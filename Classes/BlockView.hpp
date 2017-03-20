@@ -17,6 +17,7 @@
 
 class BlockView : public Sprite
 {
+
 public:
     bool initWithModel(Block* block);
     int getBlockX();
