@@ -90,11 +90,14 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     std::list<Block*> listXlastsameimg;
     std::list<Block*> listYlastsameimg;
     
-    getXNeighbor(pos, listXsameimg);
-    getYNeighbor(pos, listYsameimg);
+    auto destBlock = m_vtblockMaps[pos.y][pos.x];
+    auto srcBlock = m_vtblockMaps[lastpos.y][lastpos.x];
     
-    getXNeighbor(lastpos, listXlastsameimg);
-    getYNeighbor(lastpos, listYlastsameimg);
+    getXNeighbor(destBlock, listXsameimg);
+    getYNeighbor(destBlock, listYsameimg);
+    
+    getXNeighbor(srcBlock, listXlastsameimg);
+    getYNeighbor(srcBlock, listYlastsameimg);
     
     if(listXsameimg.size() >=3 || listYsameimg.size() >= 3 ||
        listXlastsameimg.size() >= 3 || listYlastsameimg.size() >= 3)
@@ -103,19 +106,69 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     }else
     {
         //if can't be explode, swap back
-        //swapBlock(lastpos, pos);
+        swapBlock(lastpos, pos);
     }
     
     this->m_lastpos = pos;
 }
 
-void GameBoardModel::getYNeighbor(XXL_Position pos, std::list<Block*> &listSameImage)
+void GameBoardModel::getYNeighbor(Block* block, std::list<Block*> &chainList)
 {
+    chainList.push_back(block);// add first sushi
     
+    int neighborX = block->getX();
+    int neighborY = block->getY() - 1;
+    while (neighborY >= 0) {
+        Block *neighborSushi = m_vtblockMaps[neighborY][neighborX];
+        if (neighborSushi
+            && (neighborSushi->getType() == block->getType())) {
+            chainList.push_back(neighborSushi);
+            neighborY--;
+        } else {
+            break;
+        }
+    }
+    
+    neighborY = block->getY() + 1;
+    while (neighborY < m_vtblockMaps.size()) {
+        Block *neighborSushi = m_vtblockMaps[neighborY][neighborX];
+        if (neighborSushi
+            && (neighborSushi->getType() == block->getType())) {
+            chainList.push_back(neighborSushi);
+            neighborY++;
+        } else {
+            break;
+        }
+    }
 }
-void GameBoardModel::getXNeighbor(XXL_Position pos, std::list<Block*> &listSameImage)
+void GameBoardModel::getXNeighbor(Block* block, std::list<Block*> &chainList)
 {
+    chainList.push_back(block);// add first sushi
     
+    int neighborX = block->getX() - 1;
+    int neighborY = block->getY();
+    while (neighborX >= 0) {
+        Block *neighborSushi = m_vtblockMaps[neighborY][neighborX];
+        if (neighborSushi
+            && (neighborSushi->getType() == block->getType())) {
+            chainList.push_back(neighborSushi);
+            neighborX--;
+        } else {
+            break;
+        }
+    }
+    
+    neighborX = block->getX() + 1;
+    while (neighborX < m_vtblockMaps[0].size()) {
+        Block *neighborSushi = m_vtblockMaps[neighborY][neighborX];
+        if (neighborSushi
+            && (neighborSushi->getType() == block->getType())) {
+            chainList.push_back(neighborSushi);
+            neighborX++;
+        } else {
+            break;
+        }
+    }
 }
 
 void GameBoardModel::swapBlock(XXL_Position lastpos, XXL_Position pos)

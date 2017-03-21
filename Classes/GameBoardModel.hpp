@@ -29,8 +29,8 @@ public:
 public:
     void selectBlock(XXL_Position pos);
 private:
-    void getYNeighbor(XXL_Position pos, std::list<Block*> &listSameImage);
-    void getXNeighbor(XXL_Position pos, std::list<Block*> &listSameImage);
+    void getYNeighbor(Block* block, std::list<Block*> &chainList);
+    void getXNeighbor(Block* block, std::list<Block*> &chainList);
     bool canExplode(XXL_Position pos);
     void swapBlock(XXL_Position lastpos, XXL_Position pos);
     int getRandType();

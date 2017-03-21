@@ -737,7 +737,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "114"
             endingLineNumber = "114"
-            landmarkName = "GameBoardModel::getYNeighbor(XXL_Position pos, std::list&lt;Block*&gt; &amp;listSameImage)"
+            landmarkName = "GameBoardModel::getYNeighbor(block *block, std::list&lt;Block*&gt; &amp;chainList)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
