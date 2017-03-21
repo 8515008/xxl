@@ -31,10 +31,10 @@ GameBoardModel::~GameBoardModel()
 
 bool GameBoardModel::init(int row, int col)
 {
-    for(int i=0; i<row; ++i)
+    for(int i=0; i<col; ++i)
     {
         std::vector<Block*> vectBlocks;
-        for(int t=0; t<col; ++t)
+        for(int t=0; t<row; ++t)
         {
             Block* block = Block::create();
             //block->retain();
@@ -120,13 +120,14 @@ void GameBoardModel::getXNeighbor(XXL_Position pos, std::list<Block*> &listSameI
 
 void GameBoardModel::swapBlock(XXL_Position lastpos, XXL_Position pos)
 {
-    auto lastblock = m_vtblockMaps[lastpos.x][lastpos.y];
-    auto curblock = m_vtblockMaps[pos.x][lastpos.y];
+    auto lastblock = m_vtblockMaps[lastpos.y][lastpos.x];
+    auto curblock = m_vtblockMaps[pos.y][pos.x];
     
-    XXL_CMD lastblockcmd {XXL_ACTION::moveto, 0.5, pos }, curblockcmd {XXL_ACTION::moveto, 0.1, lastpos};
+    XXL_CMD lastblockcmd {XXL_ACTION::moveto, 0.5, pos }, curblockcmd {XXL_ACTION::moveto, 0.5, lastpos};
  
     lastblock->pushCmd(lastblockcmd);
     curblock->pushCmd(curblockcmd);
+    //should add code to update block new x and y, otherwise we will get an erro
 }
 
 bool GameBoardModel::canExplode(XXL_Position pos)
