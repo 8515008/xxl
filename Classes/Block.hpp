@@ -28,6 +28,7 @@ public:
     void moveToAndBack(XXL_Position pos);
     void toExplode();
     void pushCmd(XXL_CMD cmd) { m_cmd.push_back(cmd); }
+    void removeall() { m_cmd.clear(); }
     
     
     CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);

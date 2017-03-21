@@ -96,8 +96,17 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     getXNeighbor(lastpos, listXlastsameimg);
     getYNeighbor(lastpos, listYlastsameimg);
     
-    //if can't be explode, swap back
-    swapBlock(lastpos, pos);
+    if(listXsameimg.size() >=3 || listYsameimg.size() >= 3 ||
+       listXlastsameimg.size() >= 3 || listYlastsameimg.size() >= 3)
+    {
+        
+    }else
+    {
+        //if can't be explode, swap back
+        //swapBlock(lastpos, pos);
+    }
+    
+    this->m_lastpos = pos;
 }
 
 void GameBoardModel::getYNeighbor(XXL_Position pos, std::list<Block*> &listSameImage)
