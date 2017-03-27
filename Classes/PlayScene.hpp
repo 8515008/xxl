@@ -16,6 +16,7 @@
 #include "common.h"
 
 class GameBoardLayer;
+class GameBoardModel;
 class PlayScene : public Scene
 {
 public:

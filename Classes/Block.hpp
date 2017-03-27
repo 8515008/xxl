@@ -35,6 +35,7 @@ public:
     CC_SYNTHESIZE(int, m_x, X);
     CC_SYNTHESIZE(int, m_y, Y);
     CC_SYNTHESIZE(int, m_type, Type);
+    CC_SYNTHESIZE(bool, m_isActionDone, IsActionDone);
 };
 
 #endif /* Block_hpp */

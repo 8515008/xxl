@@ -26,12 +26,21 @@ struct XXL_Position
     int y;
 };
 
+enum XXL_Direction
+{
+    up,
+    down,
+    left,
+    right,
+};
+
 
 struct XXL_CMD
 {
     XXL_ACTION action;
     float playtime;
     XXL_Position pos;
+    XXL_Direction dirction;
 };
 
 

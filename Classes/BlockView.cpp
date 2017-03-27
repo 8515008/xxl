@@ -49,7 +49,6 @@ std::string BlockView::mappingImage(int imageIndex)
 
 void BlockView::update(float data)
 {
-    int newX, newY;
     if(nullptr != m_block)
     {
         auto vtcmd = m_block->getCmd();
@@ -59,11 +58,9 @@ void BlockView::update(float data)
             switch(firstcmd.action)
             {
                 case XXL_ACTION::moveto:{
-                    newX = firstcmd.pos.x;
-                    newY = firstcmd.pos.y;
-                    int curX = this->getBlockX();
-                    int curY = this->getBlockY();
-                    auto moveBy = MoveBy::create(0.5, Vec2((newX-curX)*this->getContentSize().width, (newY-curY)*this->getContentSize().height));
+                    int x = 0, y = 0;
+                    moveDistance(firstcmd.dirction,x,y);
+                    auto moveBy = MoveBy::create(0.5, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
                     this->runAction(moveBy);
                 }
                     break;
@@ -83,6 +80,30 @@ void BlockView::update(float data)
     else
     {
         
+    }
+}
+
+void BlockView::moveDistance(XXL_Direction direction, int&x, int&y)
+{
+    switch (direction) {
+        case up:
+            y = 1;
+            break;
+            
+        case down:
+            y = -1;
+            break;
+            
+        case right:
+            x = 1;
+            break;
+            
+        case left:
+            x = -1;
+            break;
+            
+        default:
+            break;
     }
 }
 

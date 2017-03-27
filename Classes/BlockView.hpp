@@ -24,13 +24,14 @@ public:
     int getBlockY();
     void scheduleUpdate(float data);
     
+    
     CREATE_FUNC(BlockView);
     
 private:
     std::string mappingImage(int imageIndex);
     void explode();
     void actionEndCallback(Node *node);
-    
+    void moveDistance(XXL_Direction direction, int&x, int&y);
     Block* m_block;
     
 protected:

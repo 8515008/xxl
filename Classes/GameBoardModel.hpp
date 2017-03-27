@@ -13,7 +13,9 @@
 
 #include "Common.h"
 #include "Block.hpp"
+#include "PlayScene.hpp"
 
+class PlayScene;
 class GameBoardModel : public cocos2d::Ref
 {
 public:
@@ -33,6 +35,8 @@ private:
     void getXNeighbor(Block* block, std::list<Block*> &chainList);
     bool canExplode(XXL_Position pos);
     void swapBlock(XXL_Position lastpos, XXL_Position pos);
+    void updateBlockMaps(Block* block, XXL_Position pos);
+    CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
     int getRandType();
     
 private:

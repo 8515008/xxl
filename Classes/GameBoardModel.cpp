@@ -175,12 +175,34 @@ void GameBoardModel::swapBlock(XXL_Position lastpos, XXL_Position pos)
 {
     auto lastblock = m_vtblockMaps[lastpos.y][lastpos.x];
     auto curblock = m_vtblockMaps[pos.y][pos.x];
+    XXL_Direction lastblockdirection,curblockdirection;
+    if(pos.x - lastpos.x > 0)
+    {
+        lastblockdirection = XXL_Direction::right;
+        curblockdirection = XXL_Direction::left;
+    }
+    else if(pos.x - lastpos.x < 0)
+    {
+        lastblockdirection = XXL_Direction::left;
+        curblockdirection = XXL_Direction::right;
+    }
+    if(pos.y - lastpos.y >0)
+    {
+        lastblockdirection = XXL_Direction::up;
+        curblockdirection = XXL_Direction::down;
+    }
+    else if(pos.y - lastpos.y < 0)
+    {
+        lastblockdirection = XXL_Direction::down;
+        curblockdirection = XXL_Direction::up;
+    }
     
-    XXL_CMD lastblockcmd {XXL_ACTION::moveto, 0.5, pos }, curblockcmd {XXL_ACTION::moveto, 0.5, lastpos};
+    XXL_CMD lastblockcmd {XXL_ACTION::moveto, 0.5, pos,lastblockdirection}, curblockcmd {XXL_ACTION::moveto, 0.5, lastpos, curblockdirection};
  
     lastblock->pushCmd(lastblockcmd);
     curblock->pushCmd(curblockcmd);
-    //should add code to update block new x and y, otherwise we will get an erro
+    updateBlockMaps(curblock, lastpos);
+    updateBlockMaps(lastblock, pos);
 }
 
 bool GameBoardModel::canExplode(XXL_Position pos)
@@ -196,4 +218,10 @@ int GameBoardModel::getRandType()
 std::vector<std::vector<Block*>> GameBoardModel::getBlocks()
 {
     return m_vtblockMaps;
+}
+
+void GameBoardModel::updateBlockMaps(Block *block, XXL_Position pos)
+{
+    block->setX(pos.x);
+    block->setY(pos.y);
 }
