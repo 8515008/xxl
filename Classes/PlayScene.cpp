@@ -18,12 +18,14 @@ Scene* PlayScene::createScene()
     
     
     auto model = GameBoardModel::create();
+    auto layer = GameBoardLayer::create();
+    layer->setController(scene);
+    model->setController(scene);
     model->init(6,6);
     
     scene->setGameBoardModel(model);
     
-    auto layer = GameBoardLayer::create();
-    layer->setController(scene);
+    
     layer->initWithBlockModels(model->getBlocks());
     
     
@@ -34,6 +36,8 @@ Scene* PlayScene::createScene()
     background->setAnchorPoint(Point(0, 1));
     background->setPosition(Point(0, Director::getInstance()->getWinSize().height));
     scene->addChild(background,0);
+    
+    scene->retain();
 
     return (Scene*)scene;
 }
@@ -54,3 +58,4 @@ void PlayScene::selectBlock(XXL_Position pos)
 {
     this->getGameBoardModel()->selectBlock(pos);
 }
+

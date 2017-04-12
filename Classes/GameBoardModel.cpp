@@ -9,9 +9,8 @@
 #include "GameBoardModel.hpp"
 #include "math.h"
 
-
 GameBoardModel::GameBoardModel()
-{
+{    
     m_lastpos.x = -1;
     m_lastpos.y = -1;
 }
@@ -106,7 +105,7 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     }else
     {
         //if can't be explode, swap back
-        swapBlock(lastpos, pos);
+        //swapBlock(lastpos, pos);
     }
     
     this->m_lastpos = pos;
@@ -201,6 +200,9 @@ void GameBoardModel::swapBlock(XXL_Position lastpos, XXL_Position pos)
  
     lastblock->pushCmd(lastblockcmd);
     curblock->pushCmd(curblockcmd);
+    
+    m_vtblockMaps[lastpos.y][lastpos.x] = curblock;
+    m_vtblockMaps[pos.y][pos.x] = lastblock;
     updateBlockMaps(curblock, lastpos);
     updateBlockMaps(lastblock, pos);
 }

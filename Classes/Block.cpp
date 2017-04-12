@@ -7,6 +7,9 @@
 //
 
 #include "Block.hpp"
+#include "GameBoardModel.hpp"
+
+int CountMoving;
 
 void Block::moveTo(XXL_Position pos)
 {
@@ -19,6 +22,17 @@ void Block::moveTo(XXL_Position pos)
     
     m_cmd.push_back(cmd);
 }
+
+void Block::pushCmd(XXL_CMD& cmd)
+{
+    if(cmd.action == XXL_ACTION::moveto)
+        CountMoving++;
+    
+    m_cmd.push_back(cmd);
+}
+
+    
+
 /*
 void Block::moveToAndBack(XXL_Position pos)
 {

@@ -8,6 +8,7 @@
 
 #include "BlockView.hpp"
 
+
 bool BlockView:: initWithModel(Block* block)
 {
     int bImageIndex = block->getType();
@@ -62,6 +63,8 @@ void BlockView::update(float data)
                     moveDistance(firstcmd.dirction,x,y);
                     auto moveBy = MoveBy::create(0.5, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
                     this->runAction(moveBy);
+                    
+                    CountMoving--;
                 }
                     break;
                 case XXL_ACTION::explode:{

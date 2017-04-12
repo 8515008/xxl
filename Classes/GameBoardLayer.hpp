@@ -27,7 +27,7 @@ public:
 public:
     virtual bool init();
     bool initWithBlockModels(std::vector<std::vector<Block*>>);
-    
+
     CREATE_FUNC(GameBoardLayer);
     
 protected:

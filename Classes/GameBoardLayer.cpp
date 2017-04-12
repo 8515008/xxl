@@ -76,17 +76,20 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     m_listener->onTouchMoved = [this](Touch* touch, Event* event)
     {
-        XXL_Position pos;
-        Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
-        for(auto& item : bViews)
+        if(CountMoving == 0)
         {
-            if(item->getBoundingBox().containsPoint(touchPoints))
+            XXL_Position pos;
+            Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
+            for(auto& item : bViews)
             {
-                pos.x = item->getBlockX();
-                pos.y = item->getBlockY();
+                if(item->getBoundingBox().containsPoint(touchPoints))
+                {
+                    pos.x = item->getBlockX();
+                    pos.y = item->getBlockY();
+                }
             }
+            m_controller->selectBlock(pos);
         }
-        m_controller->selectBlock(pos);
         return true;
     };
     
@@ -106,3 +109,4 @@ void GameBoardLayer::update(float dt)
         item->scheduleUpdate(dt);
     }
 }
+
