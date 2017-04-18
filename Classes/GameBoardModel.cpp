@@ -105,7 +105,7 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     }else
     {
         //if can't be explode, swap back
-        //swapBlock(lastpos, pos);
+        swapBlock(lastpos, pos);
     }
     
     this->m_lastpos = pos;
