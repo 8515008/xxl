@@ -50,6 +50,8 @@ std::string BlockView::mappingImage(int imageIndex)
 
 void BlockView::update(float data)
 {
+    if(this->getNumberOfRunningActions() > 0) return;
+    
     if(nullptr != m_block)
     {
         auto vtcmd = m_block->getCmd();
@@ -61,8 +63,8 @@ void BlockView::update(float data)
                 case XXL_ACTION::moveto:{
                     int x = 0, y = 0;
                     moveDistance(firstcmd.dirction,x,y);
-                    auto moveBy = MoveBy::create(0.5, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
-                    this->runAction(moveBy);
+                    auto moveBy = MoveBy::create(0.3, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
+                    this->runAction(Sequence::create(moveBy,NULL));
                     
                     CountMoving--;
                 }
