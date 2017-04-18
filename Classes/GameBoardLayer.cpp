@@ -76,6 +76,12 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     m_listener->onTouchMoved = [this](Touch* touch, Event* event)
     {
+        for (int i = 0; i < bViews.size(); i++) {
+            BlockView *item = bViews[i];
+            if (item->getNumberOfRunningActions() > 0) {
+                return true;
+            }
+        }
         if(CountMoving == 0)
         {
             XXL_Position pos;
