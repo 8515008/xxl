@@ -31,7 +31,11 @@ void Block::pushCmd(XXL_CMD& cmd)
     m_cmd.push_back(cmd);
 }
 
-    
+void Block::removebegin()
+{
+    if(m_cmd.size() > 0)
+        m_cmd.erase(m_cmd.begin());
+}
 
 /*
 void Block::moveToAndBack(XXL_Position pos)

@@ -29,6 +29,7 @@ public:
     void toExplode();
     void pushCmd(XXL_CMD& cmd);
     void removeall() { m_cmd.clear(); }
+    void removebegin();
     
     
     CC_SYNTHESIZE(std::vector<XXL_CMD>, m_cmd, Cmd);

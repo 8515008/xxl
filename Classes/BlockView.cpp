@@ -75,9 +75,7 @@ void BlockView::update(float data)
                     break;
             }
             
-            m_block->removeall();
-            //vtcmd.erase(vtcmd.begin());
-            //int size = vtcmd.size();
+            m_block->removebegin();
         }
     }
     else
