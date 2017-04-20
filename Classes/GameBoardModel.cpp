@@ -101,7 +101,10 @@ void GameBoardModel::selectBlock(XXL_Position pos)
     if(listXsameimg.size() >=3 || listYsameimg.size() >= 3 ||
        listXlastsameimg.size() >= 3 || listYlastsameimg.size() >= 3)
     {
-        
+        removeChain(listXsameimg);
+        removeChain(listYsameimg);
+        removeChain(listYlastsameimg);
+        removeChain(listXlastsameimg);
     }else
     {
         //if can't be explode, swap back
@@ -205,6 +208,18 @@ void GameBoardModel::swapBlock(XXL_Position lastpos, XXL_Position pos)
     m_vtblockMaps[pos.y][pos.x] = lastblock;
     updateBlockMaps(curblock, lastpos);
     updateBlockMaps(lastblock, pos);
+}
+
+void GameBoardModel::removeChain(std::list<Block*> &chainList)
+{
+    if(chainList.size() < 3) return;
+    
+    XXL_CMD cmd;
+    cmd.action = XXL_ACTION::explode;
+    for(auto &it : chainList)
+    {
+        it->pushCmd(cmd);
+    }
 }
 
 bool GameBoardModel::canExplode(XXL_Position pos)

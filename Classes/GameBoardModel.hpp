@@ -33,6 +33,7 @@ public:
 private:
     void getYNeighbor(Block* block, std::list<Block*> &chainList);
     void getXNeighbor(Block* block, std::list<Block*> &chainList);
+    void removeChain(std::list<Block*> &chainList);
     bool canExplode(XXL_Position pos);
     void swapBlock(XXL_Position lastpos, XXL_Position pos);
     void updateBlockMaps(Block* block, XXL_Position pos);
