@@ -37,7 +37,7 @@ void Block::removebegin()
         m_cmd.erase(m_cmd.begin());
 }
 
-/*
+
 void Block::moveToAndBack(XXL_Position pos)
 {
     XXL_CMD cmdback;
@@ -62,4 +62,3 @@ void Block::toExplode()
     cmd.playtime = 0.2;
     m_cmd.push_back(cmd);
 }
- */
