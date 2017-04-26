@@ -132,7 +132,7 @@ void BlockView::explode()
     
     // 2. action for circle
     auto circleSprite = Sprite::create("circle.png");
-    addChild(circleSprite, 10);
+    this->getParent()->addChild(circleSprite, 10);
     circleSprite->setPosition(this->getPosition());
     circleSprite->setScale(0);// start size
     circleSprite->runAction(Sequence::create(ScaleTo::create(time, 1.0),
@@ -145,7 +145,7 @@ void BlockView::explode()
     particleStars->setBlendAdditive(false);
     particleStars->setPosition(this->getPosition());
     particleStars->setScale(0.3);
-    addChild(particleStars, 20);
+    this->getParent()->addChild(particleStars, 20);
     
     //this->m_block->release();
 }
