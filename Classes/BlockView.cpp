@@ -146,11 +146,14 @@ void BlockView::explode()
     particleStars->setPosition(this->getPosition());
     particleStars->setScale(0.3);
     addChild(particleStars, 20);
+    
+    //this->m_block->release();
 }
 
 void BlockView::actionEndCallback(Node *node)
 {
-    node->removeFromParent();
+    m_isBoom = true;
+    //node->removeFromParent();
 }
 
 void BlockView::scheduleUpdate(float data)

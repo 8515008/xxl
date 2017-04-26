@@ -26,12 +26,14 @@ public:
     
     
     CREATE_FUNC(BlockView);
+    CC_SYNTHESIZE(bool, m_isBoom, IsBoom);
     
 private:
     std::string mappingImage(int imageIndex);
     void explode();
     void actionEndCallback(Node *node);
     void moveDistance(XXL_Direction direction, int&x, int&y);
+    
     Block* m_block;
     
 protected:

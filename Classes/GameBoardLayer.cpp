@@ -69,8 +69,6 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     m_listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
-        //auto target = static_cast<GameBoardLayer*>(event->getCurrentTarget());
-        
         return true;
     };
     
@@ -110,9 +108,18 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 
 void GameBoardLayer::update(float dt)
 {
-    for(auto& item : bViews)
+    for(Vector<BlockView*>::iterator iter = bViews.begin(); iter != bViews.end(); iter++)
     {
-        item->scheduleUpdate(dt);
+        if((*iter)->getIsBoom())
+        {
+            (*iter)->removeFromParent();
+            (*iter)->release();
+            bViews.erase(iter);
+        }
+        else
+        {
+            (*iter)->scheduleUpdate(dt);
+        }
     }
 }
 
