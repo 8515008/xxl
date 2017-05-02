@@ -2,7 +2,7 @@
 //  GameBoardLayer.hpp
 //  xiaoxiaole
 //
-//  Created by test on 2017/1/17.
+//  Created by Andrew Feng on 2017/1/17.
 //
 //
 
@@ -17,31 +17,34 @@
 #include "PlayScene.hpp"
 
 USING_NS_CC;
+
 class PlayScene;
 class GameBoardLayer : public Layer
 {
+    CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
+    
 public:
     GameBoardLayer();
     virtual ~GameBoardLayer();
     
 public:
+    CREATE_FUNC(GameBoardLayer);
+    
     virtual bool init();
     bool initWithBlockModels(std::vector<std::vector<Block*>>);
-
-    CREATE_FUNC(GameBoardLayer);
     
 protected:
     virtual void update(float dt);
     
 private:
-    std::vector<BlockView*> bViews;
+    std::vector<BlockView*> m_vtBlockViews;
     EventListenerTouchOneByOne* m_listener;
-    std::vector<BlockView*> blocks;
-    CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
+    //std::vector<BlockView*> blocks;
+    
     std::string mappingImage(int imageIndex);
     void createAndDropBlocks(BlockView* block);
     Point positionOfItem(BlockView* block);
-    int i;
+    //int i;
     
 };
 

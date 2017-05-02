@@ -2,7 +2,7 @@
 //  GameBoardLayer.cpp
 //  xiaoxiaole
 //
-//  Created by test on 2017/1/17.
+//  Created by Andrew Feng on 2017/1/17.
 //
 //
 
@@ -28,43 +28,42 @@ bool GameBoardLayer::init()
     return true;
 }
 
-bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockMetrics)
+bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBlockMetrics)
 {
     //TODO: draw the matrixs according to the model data
-    float ySize = blockMetrics.size(); // 获取二维数组的Y值
-    float xSize = (*blockMetrics.begin()).size(); // 获取二维数组的X值
-    //std::vector<std::vector<Block*>>::iterator rows;
-    float x=0, y=0; //重新创建数组的x和y
+    float fYSize = vtBlockMetrics.size(); // 获取二维数组的Y值
+    float fXSize = (*vtBlockMetrics.begin()).size(); // 获取二维数组的X值
+    float fX=0, fY=0,fYTemp; //重新创建数组的x和y
     Size winSize = Director::getInstance()->getWinSize();
-
-    float yTemp;
-    for (auto& rows : blockMetrics)
+    
+    for (auto& rows : vtBlockMetrics)
     {
         for(auto& row : rows)
         {
             BlockView* block = BlockView::create();
             row->retain();
             block->initWithModel(row);
-            if(yTemp != y)
+            
+            if(fYTemp != fY)
             {
-                yTemp = y;
-                x = 0;
+                fYTemp = fY;
+                fX = 0;
             }
             
-            float blockX = winSize.width/2 + block->getContentSize().width * (x+(1-xSize)/2);
-            float blockY = winSize.height/2 + block->getContentSize().height * (y+(1-ySize)/2);
-            Point endPosition = Point(blockX, blockY);
+            float fBlockXPos = winSize.width/2 + block->getContentSize().width * (fX+(1-fXSize)/2);
+            float fBlockYPos = winSize.height/2 + block->getContentSize().height * (fY+(1-fYSize)/2);
+            Point endPosition = Point(fBlockXPos, fBlockYPos);
             Point startPosition = Point(endPosition.x, endPosition.y + winSize.height*3 / 4);
             block->setPosition(Vec2(startPosition.x, startPosition.y));
             
             this->addChild(block);
             
-            float speed = startPosition.y / (1.5 * winSize.height);
-            block->runAction(MoveTo::create(speed, endPosition));
-            bViews.push_back(block);
-            ++x;
+            float fSpeed = startPosition.y / (1.5 * winSize.height);
+            block->runAction(MoveTo::create(fSpeed, endPosition));
+            m_vtBlockViews.push_back(block);
+            ++fX;
         }
-        ++y;
+        ++fY;
     }
     
     m_listener->onTouchBegan = [this](Touch* touch, Event* event)
@@ -74,9 +73,9 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
     
     m_listener->onTouchMoved = [this](Touch* touch, Event* event)
     {
-        for (int i = 0; i < bViews.size(); i++) {
-            BlockView *item = bViews[i];
-            if (item->getNumberOfRunningActions() > 0) {
+        for (int i = 0; i < m_vtBlockViews.size(); i++) {
+            BlockView* pItem = m_vtBlockViews[i];
+            if (pItem->getNumberOfRunningActions() > 0) {
                 return true;
             }
         }
@@ -84,7 +83,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
         {
             XXL_Position pos;
             Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
-            for(auto& item : bViews)
+            for(auto& item : m_vtBlockViews)
             {
                 if(item->getBoundingBox().containsPoint(touchPoints))
                 {
@@ -108,13 +107,13 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> blockM
 
 void GameBoardLayer::update(float dt)
 {
-    for(Vector<BlockView*>::iterator iter = bViews.begin(); iter != bViews.end(); iter++)
+    for(Vector<BlockView*>::iterator iter = m_vtBlockViews.begin(); iter != m_vtBlockViews.end(); iter++)
     {
         if((*iter)->getIsBoom())
         {
             (*iter)->removeFromParent();
             (*iter)->release();
-            bViews.erase(iter);
+            m_vtBlockViews.erase(iter);
         }
         else
         {
