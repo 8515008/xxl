@@ -35,6 +35,8 @@ void Block::removebegin()
 {
     if(m_cmd.size() > 0)
         m_cmd.erase(m_cmd.begin());
+    
+    
 }
 
 

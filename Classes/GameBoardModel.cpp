@@ -52,17 +52,16 @@ bool GameBoardModel::init(int row, int col)
     {
         for(const auto& item : Yaxis)
         {
-            while(1)
-            {
-                item->setType(getRandType());
-                XXL_Position pos {item->getX(), item->getY() };
-                
-                /*if(!canExplode(pos))
-                {
-                    break;
-                }*/
-                break;
-            }
+            item->setType(getRandType());
+            XXL_Position pos {item->getX(), item->getY() };
+            
+            std::list<Block*> listXsameimg;
+            std::list<Block*> listYsameimg;
+            getXNeighbor(item, listXsameimg);
+            getYNeighbor(item, listYsameimg);
+            
+            removeChain(listXsameimg);
+            removeChain(listYsameimg);
         }
     }
     
