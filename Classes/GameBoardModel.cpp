@@ -28,12 +28,12 @@ GameBoardModel::~GameBoardModel()
  */
 }
 
-bool GameBoardModel::init(int row, int col)
+bool GameBoardModel::init(int col, int row)
 {
-    for(int i=0; i<col; ++i)
+    for(int i=0; i<row; ++i)
     {
         std::vector<Block*> vectBlocks;
-        for(int t=0; t<row; ++t)
+        for(int t=0; t<col; ++t)
         {
             Block* block = Block::create();
             //block->retain();
@@ -45,6 +45,8 @@ bool GameBoardModel::init(int row, int col)
         }
         
         m_vtblockMaps.push_back(vectBlocks);
+        
+        m_vtYaxisMoveSteps.push_back(0);
     }
     
     
@@ -218,6 +220,32 @@ void GameBoardModel::removeChain(std::list<Block*> &chainList)
     for(auto &it : chainList)
     {
         it->pushCmd(cmd);
+        
+        m_vtYaxisMoveSteps[it->getX()]++;
+        
+        XXL_CMD cmdDrop;
+        cmdDrop.action = XXL_ACTION::moveto;
+        cmdDrop.direction = XXL_Direction::down;
+        long row = m_vtblockMaps.size();
+        
+        for(int i=it->getY(); i< row; ++i)
+        {
+            m_vtblockMaps[i][it->getX()]->pushCmd(cmdDrop);
+        }
+    }
+}
+
+void GameBoardModel::fillRemovedBlocks()
+{
+    long size = m_vtYaxisMoveSteps.size();
+    
+    for(long i=0; i<size; ++i)
+    {
+        int step = m_vtYaxisMoveSteps[i];
+        if(step > 0)
+        {
+            
+        }
     }
 }
 

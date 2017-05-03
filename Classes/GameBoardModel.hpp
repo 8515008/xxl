@@ -26,7 +26,7 @@ public:
     
     CREATE_FUNC(GameBoardModel);
     
-    bool init(int row, int col);
+    bool init(int col, int row);
     std::vector<std::vector<Block*>> getBlocks();
 public:
     void selectBlock(XXL_Position pos);
@@ -36,6 +36,7 @@ private:
     void removeChain(std::list<Block*> &chainList);
     bool canExplode(XXL_Position pos);
     void swapBlock(XXL_Position lastpos, XXL_Position pos);
+    void fillRemovedBlocks();
     void updateBlockMaps(Block* block, XXL_Position pos);
     CC_SYNTHESIZE(PlayScene*, m_controller, Controller);
     int getRandType();
@@ -44,7 +45,7 @@ private:
     XXL_Position m_lastpos;
     const int BLOCKTYPE_NUM = 5;
     std::vector<std::vector<Block*>> m_vtblockMaps;
-    std::list<Block*> m_lstblockRemoving;
+    std::vector<int> m_vtYaxisMoveSteps;
 };
 
 #endif /* GameBoardModel_hpp */

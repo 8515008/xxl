@@ -62,7 +62,7 @@ void BlockView::update(float data)
             {
                 case XXL_ACTION::moveto:{
                     int x = 0, y = 0;
-                    moveDistance(firstcmd.dirction,x,y);
+                    moveDistance(firstcmd.direction,x,y);
                     auto moveBy = MoveBy::create(0.3, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
                     this->runAction(Sequence::create(moveBy,NULL));
                     

@@ -40,7 +40,7 @@ struct XXL_CMD
     XXL_ACTION action;
     float playtime;
     XXL_Position pos;
-    XXL_Direction dirction;
+    XXL_Direction direction;
 };
 
 extern int g_nCountMoving;
