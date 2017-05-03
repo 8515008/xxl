@@ -17,24 +17,23 @@
 
 class BlockView : public Sprite
 {
+    CC_SYNTHESIZE(bool, m_isExploded, IsExploded);
 
 public:
+    CREATE_FUNC(BlockView);
+    
     bool initWithModel(Block* block);
     int getBlockX();
     int getBlockY();
     void scheduleUpdate(float data);
     
-    
-    CREATE_FUNC(BlockView);
-    CC_SYNTHESIZE(bool, m_isBoom, IsBoom);
-    
 private:
+    Block* m_block;
+    
     std::string mappingImage(int imageIndex);
     void explode();
     void actionEndCallback(Node *node);
     void moveDistance(XXL_Direction direction, int&x, int&y);
-    
-    Block* m_block;
     
 protected:
     virtual void update(float data);

@@ -15,10 +15,9 @@ USING_NS_CC;
 Scene* PlayScene::createScene()
 {
     auto scene = PlayScene::create();
-    
-    
     auto model = GameBoardModel::create();
     auto layer = GameBoardLayer::create();
+    
     layer->setController(scene);
     model->setController(scene);
     model->init(6,6);

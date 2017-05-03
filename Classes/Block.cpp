@@ -2,14 +2,14 @@
 //  Block.cpp
 //  xiaoxiaole
 //
-//  Created by test on 2017/1/17.
+//  Created by James Zhou on 2017/1/17.
 //
 //
 
 #include "Block.hpp"
 #include "GameBoardModel.hpp"
 
-int CountMoving;
+int g_nCountMoving;
 
 void Block::moveTo(XXL_Position pos)
 {
@@ -26,7 +26,7 @@ void Block::moveTo(XXL_Position pos)
 void Block::pushCmd(XXL_CMD& cmd)
 {
     if(cmd.action == XXL_ACTION::moveto)
-        CountMoving++;
+        g_nCountMoving++;
     
     m_cmd.push_back(cmd);
 }

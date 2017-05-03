@@ -2,7 +2,7 @@
 //  BlockView.cpp
 //  xiaoxiaole
 //
-//  Created by Andrew on 2017/1/23.
+//  Created by Andrew Feng on 2017/1/23.
 //
 //
 
@@ -11,9 +11,9 @@
 
 bool BlockView:: initWithModel(Block* block)
 {
-    int bImageIndex = block->getType();
-    std::string imageResource = mappingImage(bImageIndex);
-    this->initWithSpriteFrameName(imageResource);
+    int nBlockImageIndex = block->getType();
+    std::string stImageResource = mappingImage(nBlockImageIndex);
+    this->initWithSpriteFrameName(stImageResource);
     m_block = block;
     return true;
 }
@@ -66,7 +66,7 @@ void BlockView::update(float data)
                     auto moveBy = MoveBy::create(0.3, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
                     this->runAction(Sequence::create(moveBy,NULL));
                     
-                    CountMoving--;
+                    g_nCountMoving--;
                 }
                     break;
                 case XXL_ACTION::explode:{
@@ -152,7 +152,7 @@ void BlockView::explode()
 
 void BlockView::actionEndCallback(Node *node)
 {
-    m_isBoom = true;
+    m_isExploded = true;
     //node->removeFromParent();
 }
 

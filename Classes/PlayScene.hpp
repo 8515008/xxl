@@ -19,19 +19,15 @@ class GameBoardLayer;
 class GameBoardModel;
 class PlayScene : public Scene
 {
-public:
-    static cocos2d::Scene* createScene();
-    
-    virtual bool init();
-        
-    CREATE_FUNC(PlayScene);
-    
-public:
-    void selectBlock(XXL_Position pos);
-    
-private:
     CC_SYNTHESIZE(GameBoardLayer*, m_gameboardLayer, GameBoardLayer);
     CC_SYNTHESIZE(GameBoardModel*, m_gameboardModel, GameBoardModel);
+    
+public:
+    CREATE_FUNC(PlayScene);
+    
+    static cocos2d::Scene* createScene();
+    virtual bool init();
+    void selectBlock(XXL_Position pos);
 };
 
 #endif /* PlayScene_hpp */

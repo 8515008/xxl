@@ -30,10 +30,9 @@ bool GameBoardLayer::init()
 
 bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBlockMetrics)
 {
-    //TODO: draw the matrixs according to the model data
     float fYSize = vtBlockMetrics.size(); // 获取二维数组的Y值
     float fXSize = (*vtBlockMetrics.begin()).size(); // 获取二维数组的X值
-    float fX=0, fY=0,fYTemp; //重新创建数组的x和y
+    float fX=0, fY=0,fYTemp; //用于轮询的数组的x，y和中间临时变量
     Size winSize = Director::getInstance()->getWinSize();
     
     for (auto& rows : vtBlockMetrics)
@@ -41,7 +40,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBloc
         for(auto& row : rows)
         {
             BlockView* block = BlockView::create();
-            row->retain();
+            row->retain(); //避免Cocos自动释放BlockView
             block->initWithModel(row);
             
             if(fYTemp != fY)
@@ -68,6 +67,7 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBloc
     
     m_listener->onTouchBegan = [this](Touch* touch, Event* event)
     {
+        //目前没有特别操作是针对TouchBegan的
         return true;
     };
     
@@ -79,25 +79,26 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBloc
                 return true;
             }
         }
-        if(CountMoving == 0)
+        if(g_nCountMoving == 0)
         {
-            XXL_Position pos;
-            Vec2 touchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
+            XXL_Position position;
+            Vec2 vcTouchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
             for(auto& item : m_vtBlockViews)
             {
-                if(item->getBoundingBox().containsPoint(touchPoints))
+                if(item->getBoundingBox().containsPoint(vcTouchPoints))
                 {
-                    pos.x = item->getBlockX();
-                    pos.y = item->getBlockY();
+                    position.x = item->getBlockX();
+                    position.y = item->getBlockY();
                 }
             }
-            m_controller->selectBlock(pos);
+            m_controller->selectBlock(position);
         }
         return true;
     };
     
     m_listener->onTouchEnded = [](Touch* touch, Event* event)
     {
+        //目前没有特别操作是针对TouchEnded的
         return true;
     };
     _eventDispatcher->addEventListenerWithSceneGraphPriority(m_listener, this);
@@ -109,7 +110,7 @@ void GameBoardLayer::update(float dt)
 {
     for(Vector<BlockView*>::iterator iter = m_vtBlockViews.begin(); iter != m_vtBlockViews.end(); iter++)
     {
-        if((*iter)->getIsBoom())
+        if((*iter)->getIsExploded())
         {
             (*iter)->removeFromParent();
             (*iter)->release();

@@ -43,7 +43,7 @@ struct XXL_CMD
     XXL_Direction dirction;
 };
 
-extern int CountMoving;
+extern int g_nCountMoving;
 
 #endif /* Common_h */
 
