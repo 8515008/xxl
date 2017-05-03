@@ -20,7 +20,7 @@ Scene* PlayScene::createScene()
     
     layer->setController(scene);
     model->setController(scene);
-    model->init(6,6);
+    model->init(6,7);
     
     scene->setGameBoardModel(model);
     

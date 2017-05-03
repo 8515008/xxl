@@ -55,7 +55,6 @@ bool GameBoardModel::init(int col, int row)
         for(const auto& item : Yaxis)
         {
             item->setType(getRandType());
-            XXL_Position pos {item->getX(), item->getY() };
             
             std::list<Block*> listXsameimg;
             std::list<Block*> listYsameimg;
