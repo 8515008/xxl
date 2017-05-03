@@ -45,7 +45,8 @@ static AppDelegate s_sharedApplication;
 
     // Use RootViewController to manage CCEAGLView
     _viewController = [[RootViewController alloc]init];
-    _viewController.wantsFullScreenLayout = YES;
+    _viewController.edgesForExtendedLayout = UIRectEdgeAll; //To fix wantsFullScreenLayout issue
+    //_viewController.wantsFullScreenLayout = YES;
     
 
     // Set RootViewController to window
