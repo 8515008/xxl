@@ -18,9 +18,11 @@ Scene* PlayScene::createScene()
     auto model = GameBoardModel::create();
     auto layer = GameBoardLayer::create();
     
+    ValueMap conf = FileUtils::getInstance()->getValueMapFromFile("Configuration.plist");
+    
     layer->setController(scene);
     model->setController(scene);
-    model->init(6,7);
+    model->init(conf["Column"].asInt(),conf["Row"].asInt());
     
     scene->setGameBoardModel(model);
     
