@@ -66,7 +66,7 @@ void BlockView::update(float data)
                     auto moveBy = MoveBy::create(0.3, Vec2(x*this->getContentSize().width, y*this->getContentSize().height));
                     this->runAction(Sequence::create(moveBy,NULL));
                     
-                    g_nCountMoving--;
+                    //g_nCountMoving--;
                 }
                     break;
                 case XXL_ACTION::explode:{

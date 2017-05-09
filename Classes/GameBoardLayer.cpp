@@ -79,7 +79,8 @@ bool GameBoardLayer::initWithBlockModels(std::vector<std::vector<Block*>> vtBloc
                 return true;
             }
         }
-        if(g_nCountMoving == 0)
+        
+        //if(g_nCountMoving == 0)
         {
             XXL_Position position;
             Vec2 vcTouchPoints = Director::getInstance()->convertToGL(touch->getLocationInView());
